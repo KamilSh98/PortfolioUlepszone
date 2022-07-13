@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b668d78e6.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h3>Porfolio</h3>
+                    <h1>Kamil Shaikha</h1>
+                </div>
+                <ul>
+                    <li><a href="#">Strona główna</a></li>
+                    <li><a href="#">Umiejętności</a></li>
+                    <li><a href="#">Projekty</a></li>
+                    <a class="socials" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="socials" href="#"><i class="fa-brands fa-linkedin-in"></i></a>  
+                    <a class="socials" href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="contactNav" data-text="Kontakt">Kontakt</a>
+                </ul>
+            </nav>
+            <div class="main-header">
+                <div class="header-left">
+                    <div class="welcome">
+                        <p>Witaj na moim portfolio</p>
+                    </div>
+                    <h2>Nazywam sie Kamil Shaikha</h2>
+                    <p class="review">Jestem studentem V roku zarządzania i inżynierii produkcji na Politechnice Rzeszowskiej. W marcu 2022 roku otrzymałem tytuł inżyniera. 
+                        W wolnych chwilach staram się rozwijać umiejętności z dziedziny programowania, aby
+                        w najbliższej przyszłości móc zostać frontend developerem. </p>
+                    <div class="header-box">
+                        <a href="">Skontakuj się ze mną<i class="fa-solid fa-angles-right"></i></a></br>
+                        <a href="" style="background: #222426; color: #fff">Pobierz moje CV<i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <img src="img/portret.jpg" width="400px" height="400px">
+                </div>
+            </div>
+        </header>
+        <div class="skills">
+            <h4>Skills</h4>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>
+    </div>
+    <script>
+        let spinnerWrapper = document.querySelector('.spinner-wrapper');
+    
+        window.addEventListener('load', function () {
+            spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+        });
+    </script>
+    </body>
+</html>

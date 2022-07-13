@@ -1,0 +1,223 @@
+$primary-color: rgb(55, 143, 149)
+$black-color: rgba(34, 36, 38, 1)
+$secondary-color: #fff
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    font-family: 'Roboto', sans-serif
+
+html
+    font-size: 10px
+
+.container
+    background: linear-gradient(225deg, $black-color 25%, rgba(55, 143, 149, 0.6) 90%), url("img/bg.jpg") no-repeat center center / cover
+    header
+        width: 100%
+        height: 100vh
+        nav
+            display: flex
+            width: 95vw
+            margin: 0 auto
+            .logo
+                h3
+                    padding: 40px 0 0 40px
+                    margin: 0
+                    color: $secondary-color
+                    font-size: 2.5rem
+                    text-transform: uppercase
+                    letter-spacing: 3px
+                    font-family: 'Orbitron', cursive
+                h1
+                    color: $secondary-color
+                    padding: 0px 0 0 40px
+                    font-size: 4rem
+                    letter-spacing: 4px
+                    width: 35vw
+                    font-family: 'Orbitron', cursive
+                    font-weight: bolder
+            ul
+                display: flex
+                justify-content: right
+                width: 70vw
+                li
+                    list-style-type: none
+                    padding: 55px 10px 40px 10px
+                    a
+                        text-decoration: none
+                        color: $secondary-color
+                        font-size: 2rem
+                        font-weight: 600
+                        position: relative
+                        padding: 0 10px
+                        font-family: 'Orbitron', cursive
+                    a:hover
+                        color: $primary-color
+                    a:after
+                        content: ""
+                        position: absolute
+                        background-color: $primary-color
+                        height: 3px
+                        width: 0%
+                        left: 0
+                        bottom: -10px
+                        transition: .3s
+                    a:hover:after
+                        width:  100%
+                a.contactNav
+                    position: relative
+                    font-size: 2.6rem
+                    line-height: 1em
+                    color: $secondary-color
+                    border: 1px solid $secondary-color
+                    padding: 20px
+                    margin: 35px auto auto 20px
+                    font-weight: 600
+                    letter-spacing: 2px
+                    font-family: 'Orbitron', cursive
+                    &::before
+                        content: attr(data-text)
+                        position: absolute
+                        color: $secondary-color
+                        width: 0
+                        overflow: hidden
+                        transition: 2s
+                    &:hover::before
+                        width: 100%
+                        -webkit-text-stroke: 1px $primary-color
+                        color: $primary-color
+                a.socials
+                    border: 1.5px solid $secondary-color
+                    border-radius: 10rem
+                    height: 5rem
+                    width: 5rem
+                    position: relative
+                    margin: 45px 5px 0 10px
+                    &:hover
+                        background: $primary-color
+                        -webkit-box-shadow: 0px 0px 5px 5px rgba(55, 143, 149, 1)
+                        -moz-box-shadow: 0px 0px 5px 5px rgba(55, 143, 149, 1)
+                        box-shadow: 0px 0px 5px 5px rgba(55, 143, 149, 1)
+                        i
+                            color: $black-color
+                            font-family: 'Orbitron', cursive
+                    i
+                        font-size: 3rem
+                        color: $secondary-color
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        margin-right: -50%
+                        transform: translate(-50%, -50%)
+                        &:hover
+        .main-header
+            display: flex
+            width: 90vw
+            height: 80%
+            .header-left
+                width: 68%
+                margin: auto
+                margin-left: 5vw
+                h2
+                    font-size: 5rem
+                    color: $primary-color
+                    font-weight: 600
+                    color: $secondary-color
+                    font-family: 'Orbitron', cursive
+                .welcome
+                    p
+                        font-size: 2rem
+                        border: 1px solid $secondary-color
+                        width: 280px
+                        padding: 10px
+                        color: $primary-color
+                        background: $secondary-color
+                        font-weight: bolder
+                        font-family: 'Orbitron', cursive
+                p.review
+                    font-size: 2rem
+                    color: $secondary-color
+                    margin-bottom: 100px
+                .header-box
+                    display: flex
+                    width: 100%
+                    a
+                        font-size: 2.5rem
+                        color: $black-color
+                        font-weight: 800
+                        font-family: 'Roboto', sans-serif
+                        width: 50%
+                        text-align: center
+                        padding: 30px
+                        margin: 30px
+                        background: $secondary-color
+                        border: 2px solid $black-color
+                        i
+                            margin-left: 5px
+            .header-right
+                margin: auto
+                width: 30%
+                display: flex
+                justify-content: center
+                justify-items: center
+                img
+                    border: 1px solid $secondary-color
+                    border-radius: 100%
+
+
+    .skills
+        height: 50vh
+        width: 85vw
+        margin: auto
+        border-radius: 10vh
+        background: $black-color
+        h4
+            color: $secondary-color
+            font-size: 5rem
+            padding: 50px
+            text-align: center
+
+
+
+
+
+.spinner-wrapper
+    width: 100%
+    height: 100%
+    background-color: $black-color
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 9999
+    display: flex
+    align-items: center
+    justify-content: center
+    .spinner 
+        position: relative
+        width: 8rem
+        height: 8rem
+        border-radius: 50%
+    .spinner::before,
+    .spinner:after
+        content: ""
+        position: absolute
+        border-radius: 50%
+    .spinner:before 
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(90deg, #378f95 0%,#7c7c6c 100%)
+        animation: spin .5s infinite linear
+    .spinner:after 
+        width: 90%
+        height: 90%
+        background-color: $black-color
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        
+    @keyframes spin
+        to
+            transform: rotate(360deg)
+        
