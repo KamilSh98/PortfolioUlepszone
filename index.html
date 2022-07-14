@@ -14,8 +14,8 @@
         <header>
             <nav>
                 <div class="logo">
-                    <h3>Porfolio</h3>
-                    <h1>Kamil Shaikha</h1>
+                    <a href="#"><h3>Porfolio</h3></a>
+                    <a href="#"><h1>Kamil Shaikha</h1></a>
                 </div>
                 <ul>
                     <li><a href="#">Strona główna</a></li>
@@ -46,8 +46,28 @@
                 </div>
             </div>
         </header>
-        <div class="skills">
-            <h4>Skills</h4>
+        <div class="skills-container">
+            <h4>Skills<i class="fa-solid fa-arrow-trend-up"></i></h4>
+            <p>W swojej histori progrmaowania korzystałem z języków takich jak: HTML, CSS + Preprocesor SASS, JavaScript, Bootstrap. Wykonałem także projekt na studiach 
+                z podstaw PHP oraz MySQL. Korzystałem w miejszym lub wiekszym stopniu z systemów zarządzania treścią (CMS) takich jak Wordpress oraz Joomla!  </p>
+            <div class="all-skills">
+                <div class="skill">
+                    <div class="outer">
+                        <div class="inner">
+                            <div id="number"></div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
+                        <defs>
+                           <linearGradient id="GradientColor">
+                              <stop offset="0%" stop-color="#378f95" />
+                              <stop offset="100%" stop-color="#fff" />
+                           </linearGradient>
+                        </defs>
+                        <circle cx="110" cy="110" r="100" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
         </div>
 
 
@@ -66,12 +86,9 @@
     <div class='spinner-wrapper'>
         <div class="spinner"></div>
     </div>
-    <script>
-        let spinnerWrapper = document.querySelector('.spinner-wrapper');
-    
-        window.addEventListener('load', function () {
-            spinnerWrapper.parentElement.removeChild(spinnerWrapper);
-        });
-    </script>
+
+
+    <script src="spinner.js"></script>
+    <script src="circle.js"></script>
     </body>
 </html>

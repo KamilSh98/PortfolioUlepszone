@@ -28,7 +28,7 @@ html {
   margin: 0 auto;
 }
 
-.container header nav .logo h3 {
+.container header nav .logo a h3 {
   padding: 40px 0 0 40px;
   margin: 0;
   color: #fff;
@@ -38,7 +38,7 @@ html {
   font-family: 'Orbitron', cursive;
 }
 
-.container header nav .logo h1 {
+.container header nav .logo a h1 {
   color: #fff;
   padding: 0px 0 0 40px;
   font-size: 4rem;
@@ -139,7 +139,6 @@ html {
 
 .container header nav ul a.socials:hover i {
   color: #222426;
-  font-family: 'Orbitron', cursive;
 }
 
 .container header nav ul a.socials i {
@@ -233,19 +232,101 @@ html {
   border-radius: 100%;
 }
 
-.container .skills {
+.container .skills-container {
   height: 50vh;
-  width: 85vw;
+  width: 90vw;
   margin: auto;
   border-radius: 10vh;
   background: #222426;
 }
 
-.container .skills h4 {
+.container .skills-container h4 {
   color: #fff;
   font-size: 5rem;
   padding: 50px;
   text-align: center;
+}
+
+.container .skills-container h4 i {
+  margin-left: 15px;
+}
+
+.container .skills-container p {
+  font-size: 2rem;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.container .skills-container .all-skills {
+  position: relative;
+}
+
+.container .skills-container .all-skills .skill {
+  width: 220px;
+  height: 220px;
+  position: relative;
+}
+
+.container .skills-container .all-skills .skill .outer {
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 5px 4px #378f95;
+          box-shadow: 0px 0px 5px 4px #378f95;
+  padding: 20px;
+}
+
+.container .skills-container .all-skills .skill .outer .inner {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: inset 4px 4px 6px -1px #378f95, inset -4px -4px 6px -1px #378f95, -0.5px -0.5px 0px #378f95;
+          box-shadow: inset 4px 4px 6px -1px #378f95, inset -4px -4px 6px -1px #378f95, -0.5px -0.5px 0px #378f95;
+}
+
+.container .skills-container .all-skills .skill .outer .inner #number {
+  font-weight: 600;
+  color: #378f95;
+  font-size: 3rem;
+}
+
+.container .skills-container .all-skills .skill svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .skills-container .all-skills .skill svg circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 625;
+  stroke-dashoffset: 625;
+  -webkit-animation: animationCircle 2s linear forwards;
+          animation: animationCircle 2s linear forwards;
+}
+
+@-webkit-keyframes animationCircle {
+  100% {
+    stroke-dashoffset: 219;
+  }
+}
+
+@keyframes animationCircle {
+  100% {
+    stroke-dashoffset: 219;
+  }
 }
 
 .spinner-wrapper {

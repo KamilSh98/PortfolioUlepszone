@@ -22,22 +22,23 @@ html
             width: 95vw
             margin: 0 auto
             .logo
-                h3
-                    padding: 40px 0 0 40px
-                    margin: 0
-                    color: $secondary-color
-                    font-size: 2.5rem
-                    text-transform: uppercase
-                    letter-spacing: 3px
-                    font-family: 'Orbitron', cursive
-                h1
-                    color: $secondary-color
-                    padding: 0px 0 0 40px
-                    font-size: 4rem
-                    letter-spacing: 4px
-                    width: 35vw
-                    font-family: 'Orbitron', cursive
-                    font-weight: bolder
+                a
+                    h3
+                        padding: 40px 0 0 40px
+                        margin: 0
+                        color: $secondary-color
+                        font-size: 2.5rem
+                        text-transform: uppercase
+                        letter-spacing: 3px
+                        font-family: 'Orbitron', cursive
+                    h1
+                        color: $secondary-color
+                        padding: 0px 0 0 40px
+                        font-size: 4rem
+                        letter-spacing: 4px
+                        width: 35vw
+                        font-family: 'Orbitron', cursive
+                        font-weight: bolder
             ul
                 display: flex
                 justify-content: right
@@ -102,7 +103,6 @@ html
                         box-shadow: 0px 0px 5px 5px rgba(55, 143, 149, 1)
                         i
                             color: $black-color
-                            font-family: 'Orbitron', cursive
                     i
                         font-size: 3rem
                         color: $secondary-color
@@ -167,9 +167,9 @@ html
                     border-radius: 100%
 
 
-    .skills
+    .skills-container
         height: 50vh
-        width: 85vw
+        width: 90vw
         margin: auto
         border-radius: 10vh
         background: $black-color
@@ -178,7 +178,53 @@ html
             font-size: 5rem
             padding: 50px
             text-align: center
+            i
+                margin-left: 15px
+        p
+            font-size: 2rem
+            width: 80%
+            text-align: center
+            margin: 0 auto
+            color: $secondary-color
+        .all-skills
+            position: relative
+            .skill
+                width: 220px
+                height: 220px
+                position: relative
+                .outer
+                    height: 220px
+                    width: 220px
+                    border-radius: 50%
+                    box-shadow: 0px 0px 5px 4px $primary-color
+                    padding: 20px
+                    .inner
+                        height: 180px
+                        width: 180px
+                        border-radius: 50%
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        box-shadow: inset 4px 4px 6px -1px $primary-color, inset -4px -4px 6px -1px $primary-color, -0.5px -0.5px 0px $primary-color
+                        #number
+                            font-weight: 600
+                            color: $primary-color
+                            font-size: 3rem
+                svg
+                    position: absolute
+                    top: 0
+                    left: 0
+                    circle
+                        fill: none
+                        stroke: url(#GradientColor)
+                        stroke-width: 20px
+                        stroke-dasharray: 625
+                        stroke-dashoffset: 625
+                        animation: animationCircle 2s linear forwards
 
+                        @keyframes animationCircle
+                            100%
+                                stroke-dashoffset: 219
 
 
 
