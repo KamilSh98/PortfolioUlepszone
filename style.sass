@@ -1,5 +1,7 @@
+@import mixins.sass
+    
 $primary-color: rgb(55, 143, 149)
-$black-color: rgba(34, 36, 38, 1)
+$black-color: #222426
 $secondary-color: #fff
 
 *
@@ -168,7 +170,6 @@ html
 
 
     .skills-container
-        height: 50vh
         width: 90vw
         margin: auto
         border-radius: 10vh
@@ -186,12 +187,19 @@ html
             text-align: center
             margin: 0 auto
             color: $secondary-color
+            margin-bottom: 40px
         .all-skills
             position: relative
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            gap: 40px
+            justify-items: center
+            padding-bottom: 40px
             .skill
                 width: 220px
                 height: 220px
                 position: relative
+                margin-bottom: 50px
                 .outer
                     height: 220px
                     width: 220px
@@ -206,25 +214,132 @@ html
                         align-items: center
                         justify-content: center
                         box-shadow: inset 4px 4px 6px -1px $primary-color, inset -4px -4px 6px -1px $primary-color, -0.5px -0.5px 0px $primary-color
-                        #number
+                        #numberHTML, #numberCSS, #numberJS, #numberBootstrap, #numberPHP, #numberMYSQL, #numberWordpress, #numberJoomla
                             font-weight: 600
                             color: $primary-color
                             font-size: 3rem
+                        i
+                            font-size: 4rem
+                            color: $primary-color
+                            margin-right: 10px
+                p
+                    font-size: 3.5rem
+                    padding: 10px
+                    font-family: 'Orbitron', cursive
+                    color: $primary-color
+                    text-align: center
                 svg
                     position: absolute
                     top: 0
                     left: 0
-                    circle
-                        fill: none
-                        stroke: url(#GradientColor)
-                        stroke-width: 20px
-                        stroke-dasharray: 625
-                        stroke-dashoffset: 625
-                        animation: animationCircle 2s linear forwards
+                    circle.HTML
+                        @include circle
+                        animation: animationCircleHTML 2s linear forwards
 
-                        @keyframes animationCircle
+                        @keyframes animationCircleHTML
                             100%
-                                stroke-dashoffset: 219
+                                stroke-dashoffset: 93
+                    circle.CSS
+                        @include circle
+                        animation: animationCircleCSS 2s linear forwards
+
+                        @keyframes animationCircleCSS
+                            100%
+                                stroke-dashoffset: 125
+                    circle.JS
+                        @include circle
+                        animation: animationCircleJS 2s linear forwards
+
+                        @keyframes animationCircleJS
+                            100%
+                                stroke-dashoffset: 312.5
+                    circle.Bootstrap
+                        @include circle
+                        animation: animationCircleBootstrap 2s linear forwards
+
+                        @keyframes animationCircleBootstrap
+                            100%
+                                stroke-dashoffset: 250
+                    circle.PHP
+                        @include circle
+                        animation: animationCirclePHP 2s linear forwards
+
+                        @keyframes animationCirclePHP
+                            100%
+                                stroke-dashoffset: 531
+                    circle.MYSQL
+                        @include circle
+                        animation: animationCircleMYSQL 2s linear forwards
+
+                        @keyframes animationCircleMYSQL
+                            100%
+                                stroke-dashoffset: 500
+                    circle.Wordpress
+                        @include circle
+                        animation: animationCircleWordpress 2s linear forwards
+
+                        @keyframes animationCircleWordpress
+                            100%
+                                stroke-dashoffset: 406
+                    circle.Joomla
+                        @include circle
+                        animation: animationCircleJoomla 2s linear forwards
+
+                        @keyframes animationCircleJoomla
+                            100%
+                                stroke-dashoffset: 437.5
+
+    .projects-container
+        margin-top: 75px
+        background: $black-color
+        width: 100%
+        h4
+            color: $secondary-color
+            font-size: 5rem
+            padding: 50px
+            text-align: center
+            i
+                margin-left: 15px
+        p
+            font-size: 2rem
+            width: 70%
+            text-align: center
+            margin: 0 auto
+            color: $secondary-color
+            margin-bottom: 40px
+        .project-buttons
+            display: flex
+            justify-content: center
+            button
+                height: 70px
+                background: #444648
+                border: 1px solid $secondary-color
+                width: calc(65%/3)
+                font-size: 2rem
+                color: $secondary-color
+                font-weight: 500
+                cursor: pointer
+                &:hover
+                    background: $black-color
+            button.leftButton
+                border-top-left-radius: 30px
+                border-bottom-left-radius: 30px
+            button.rightButton
+                border-top-right-radius: 30px
+                border-bottom-right-radius: 30px
+        .projects-all
+            display: grid
+            padding: 50px 120px 50px 120px
+            gap: 50px
+            grid-template-columns: 1fr 1fr 1fr
+            .project
+                border: 1px solid $black-color
+                border-radius: 40px
+                overflow: hidden
+                z-index: 3
+                img
+                    width: 100%
+                    height: 30vh
 
 
 
