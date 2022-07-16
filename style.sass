@@ -290,9 +290,8 @@ html
                                 stroke-dashoffset: 437.5
 
     .projects-container
-        margin-top: 75px
         background: $black-color
-        width: 100%
+        margin-top: 75px
         h4
             color: $secondary-color
             font-size: 5rem
@@ -329,20 +328,90 @@ html
                 border-bottom-right-radius: 30px
         .projects-all
             display: grid
-            padding: 50px 120px 50px 120px
-            gap: 50px
             grid-template-columns: 1fr 1fr 1fr
+            margin-top: 30px
+            padding-bottom: 40px
             .project
-                border: 1px solid $black-color
-                border-radius: 40px
+                position: relative
+                width: 30vw
+                height: 320px
+                display: flex
+                justify-content: center
+                align-items: center
+                margin: 20px
+                transition: 0.5s
+                border-radius: 5px
                 overflow: hidden
-                z-index: 3
-                img
+                .imgBox
+                    position: absolute
+                    top: 0
+                    left: 0
                     width: 100%
-                    height: 30vh
+                    height: 300px
+                    padding: 10px
+                    box-sizing: border-box
+                    z-index: 1
+                    img
+                        max-width: 100%
+                        opacity: 0.3
+                        transition: 0.5s
+                .content
+                    position: absolute
+                    bottom: 0
+                    left: 10px
+                    right: 10px
+                    bottom: 10px
+                    height: 80px
+                    background: rgba(0, 0, 0, 0.7)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    text-align: center
+                    opacity: 0
+                    transition: .5s
+                    z-index: 1
+                    h2
+                        font-size: 20px
+                        color: $secondary-color
+                        font-weight: 600
+                        line-height: 20px
+                        letter-spacing: 1px
+                        span
+                            font-size: 14px
+                            color: $secondary-color
+                            font-weight: 200
+                            line-height: 20px
+                            letter-spacing: 1px
+                &:before
+                    content: ''
+                    position: absolute
+                    top: 5px
+                    bottom: 5px
+                    left: 5px
+                    right: 5px
+                    background: linear-gradient(225deg, $black-color 20%, rgba(55, 143, 149, 0.6) 100%)
+                    z-index: 1
+                &:after
+                    content: ''
+                    position: absolute
+                    top: 4px
+                    bottom: 4px
+                    left: 4px
+                    right: 4px
+                    background: linear-gradient(225deg, $secondary-color 20%, rgba(55, 143, 149, 1) 100%)
+                    filter: blur(8px)
+                    z-index: 0
+            .project:hover
+                height: 400px
+                .imgBox
+                    img
+                        opacity: 1
+                .content
+                    opacity: 1
 
 
-
+    .contact-container
+        height: 500px
 
 .spinner-wrapper
     width: 100%
