@@ -14,6 +14,9 @@ $secondary-color: #fff
 html
     font-size: 10px
 
+body
+    overflow: hidden
+
 .container
     background: linear-gradient(225deg, $black-color 25%, rgba(55, 143, 149, 0.6) 90%), url("img/bg.jpg") no-repeat center center / cover
     header
@@ -24,6 +27,7 @@ html
             width: 95vw
             margin: 0 auto
             .logo
+                width: 30%
                 a
                     h3
                         padding: 40px 0 0 40px
@@ -44,7 +48,8 @@ html
             ul
                 display: flex
                 justify-content: right
-                width: 70vw
+                width: 60%
+                margin-left: 10%
                 li
                     list-style-type: none
                     padding: 55px 10px 40px 10px
@@ -114,6 +119,9 @@ html
                         margin-right: -50%
                         transform: translate(-50%, -50%)
                         &:hover
+
+
+
         .main-header
             display: flex
             width: 90vw
@@ -411,7 +419,102 @@ html
 
 
     .contact-container
-        height: 500px
+        box-sizing: border-box
+        position: relative
+        width: 70vw
+        min-height: 400px
+        background: rgba(255, 255, 255, 0.1)
+        display: flex
+        justify-content: center
+        align-items: center
+        backdrop-filter: blur(5px)
+        box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1)
+        border: 1px solid rgba(255, 255, 255, 0.5)
+        border-right: 1px solid rgba(255, 255, 255, 0.2)
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+        border-radius: 20px
+        margin: 150px auto 150px auto
+        .form
+            position: relative
+            width: 70%
+            height: 100%
+            padding: 40px
+            z-index: 4
+            h4
+                position: relative
+                color: $secondary-color
+                font-weight: 600
+                letter-spacing: 2px
+                margin-bottom: 40px
+                font-size: 5rem
+                padding: 30px
+                text-align: center
+                &::before
+                    content: ''
+                    position: absolute
+                    left: 70px
+                    bottom: 25px
+                    width: 620px
+                    height: 4px
+                    background: $secondary-color
+            .inputBox
+                width: 100%
+                margin-top: 20px
+                input
+                    width: 100%
+                    background: rgba(255, 255, 255, 0.2)
+                    border: none
+                    outline: none
+                    padding: 10px 20px
+                    border-radius: 35px
+                    border: 1px solid rgba(255, 255, 255, 0.5)
+                    border-right: 1px solid rgba(255, 255, 255, 0.2)
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+                    font-size: 1rem
+                    color: #fff
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05)
+                    &::placeholder
+                        color: $secondary-color
+                    &[type="submit"]
+                        background: $secondary-color
+                        color: $primary-color
+                        max-width: 300px
+                        cursor: pointer
+                        margin-bottom: 20px
+                        font-weight: 600
+        .square
+            position: absolute
+            backdrop-filter: blur(5px)
+            background: rgba(255, 255, 255, 0.1)
+            box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1)
+            border: 1px solid rgba(255, 255, 255, 0.5)
+            border-right: 1px solid rgba(255, 255, 255, 0.2)
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+            border-radius: 20px
+            &:nth-child(1)
+                top: -70px
+                right: -100px
+                width: 200px
+                height: 200px
+            &:nth-child(2)
+                top: 450px
+                right: 200px
+                width: 200px
+                height: 120px
+            &:nth-child(3)
+                top: 200px
+                right: 1300px
+                width: 80px
+                height: 80px
+            &:nth-child(4)
+                top: -80px
+                right: 1000px
+                width: 140px
+                height: 140px
+                
+    .footer-container
+        height: 400px
+        background: $black-color
 
 .spinner-wrapper
     width: 100%
@@ -426,8 +529,8 @@ html
     justify-content: center
     .spinner 
         position: relative
-        width: 8rem
-        height: 8rem
+        width: 16rem
+        height: 16rem
         border-radius: 50%
     .spinner::before,
     .spinner:after
@@ -437,7 +540,7 @@ html
     .spinner:before 
         width: 100%
         height: 100%
-        background-image: linear-gradient(90deg, #378f95 0%,#7c7c6c 100%)
+        background-image: linear-gradient(90deg, $primary-color 0%,$secondary-color 100%)
         animation: spin .5s infinite linear
     .spinner:after 
         width: 90%
@@ -446,8 +549,76 @@ html
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+    .spinner-smaller
+        position: absolute
+        width: 10rem
+        height: 10rem
+        border-radius: 50%
+    .spinner-smaller::before,
+    .spinner-smaller:after
+        content: ""
+        position: absolute
+        border-radius: 50%
+    .spinner-smaller:before 
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(220deg, $primary-color 0%,$secondary-color 100%)
+        animation: spin .5s infinite linear
+    .spinner-smaller:after 
+        width: 90%
+        height: 90%
+        background-color: $black-color
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    h1
+        position: absolute
+        font-size: 4rem
+        font-family: 'Orbitron', cursive
+        color: $primary-color
         
     @keyframes spin
         to
             transform: rotate(360deg)
         
+::-webkit-scrollbar
+    width: 0
+
+#scrollPath
+    position: fixed
+    top: 0
+    right: 0
+    width: 10px
+    height: 100%
+    background: rgba(255, 255, 255, 0.05)
+
+#progressbar
+    position: fixed
+    top: 0
+    right: 0
+    width: 10px
+    background: linear-gradient(225deg, $primary-color 25%, $primary-color 100%)
+    animation: animationScrollbar 5s linear infinite
+    @keyframes animationScrollbar 
+        0%, 100%
+            filter: hue-rotate(0deg)
+        50%
+            filter: hue-rotate(40deg)
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(225deg, $primary-color 25%, $primary-color 100%)
+        filter: blur(10px)
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(225deg, $primary-color 25%, $primary-color 100%)
+        filter: blur(10px)
