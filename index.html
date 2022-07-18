@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <img src="img/portret.jpg" width="400px" height="400px">
+                    <img src="img/portret.jpg" width="400px" height="400px" alt="portret">
                 </div>
             </div>
         </header>
@@ -211,7 +211,7 @@
             <div class="projects-all">
                 <div class="project">
                     <div class="imgBox">
-                        <img src="img/Projekt1.png" style="width: 30vw; height: 300px">
+                        <img src="img/Projekt1.png" style="width: 30vw; height: 300px" alt="projekt1">
                     </div>
                     <div class="content">
                         <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
@@ -219,7 +219,7 @@
                 </div>
                 <div class="project">
                     <div class="imgBox">
-                        <img src="img/Projekt2.png" style="width: 30vw; height: 300px">
+                        <img src="img/Projekt2.png" style="width: 30vw; height: 300px" alt="projekt2">
                     </div>
                     <div class="content">
                         <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
@@ -227,7 +227,7 @@
                 </div>
                 <div class="project">
                     <div class="imgBox">
-                        <img src="img/Projekt3.png" style="width: 30vw; height: 300px">
+                        <img src="img/Projekt3.png" style="width: 30vw; height: 300px" alt="projekt3">
                     </div>
                     <div class="content">
                         <h2>Projekt 3 - HTML, CSS + SASS, JQuery <br><span>Crative</span></h2>
@@ -235,7 +235,7 @@
                 </div>
                 <div class="project">
                     <div class="imgBox">
-                        <img src="img/Projekt4.png" style="width: 30vw; height: 300px">
+                        <img src="img/Projekt4.png" style="width: 30vw; height: 300px" alt="projekt4">
                     </div>
                     <div class="content">
                         <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
@@ -243,7 +243,7 @@
                 </div>
                 <div class="project">
                     <div class="imgBox">
-                        <img src="img/Projekt5.png" style="width: 30vw; height: 300px">
+                        <img src="img/Projekt5.png" style="width: 30vw; height: 300px" alt="projekt5">
                     </div>
                     <div class="content">
                         <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
@@ -251,7 +251,7 @@
                 </div>
                 <div class="project">
                     <div class="imgBox">
-                        <img src="img/Projekt6.png" style="width: 30vw; height: 300px">
+                        <img src="img/Projekt6.png" style="width: 30vw; height: 300px" alt="projekt6">
                     </div>
                     <div class="content">
                         <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
@@ -267,18 +267,32 @@
             <div class="square" style="--i:2"></div>
             <div class="square" style="--i:3"></div>
             <div class="square" style="--i:4"></div>
+            <div class="square" style="--i:5"></div>
+            <div class="square" style="--i:6"></div>
+            <div class="contact-info">
+                <h4>Dane</h4>
+                <h5><i class="fa-solid fa-envelope"></i>Email:</h5>
+                <p>kamilshaikha1998@gmail.com</p>
+                <h5><i class="fa-solid fa-envelope"></i>Telefon:</h5>
+                <p>535-366-296</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook-square" style="--i:1"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin" style="--i:2"></i></a>  
+                    <a href="#"><i class="fa-brands fa-github-square" style="--i:3"></i></a>
+                </div>
+            </div>
             <div class="form">
                 <h4>Formularz kontaktowy</h4>
                 <form action="">
                     <div class="inputBox">
-                        <input type="text" name="Imię">
-                        <input type="text" name="Nazwisko">
+                        <input type="text" name="Imię" placeholder="Imię" id="name">
+                        <input type="text" name="Nazwisko" placeholder="Nazwisko" id="lastname">
                     </div>
                     <div class="inputBox">
-                        <input type="email" name="Email">
+                        <input type="email" name="Email" placeholder="Email">
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="Wiadomość" id="">
+                        <textarea cols="30" rows="10" placeholder="Wiadomość..."></textarea>
                     </div>
                     <div class="inputBox">
                         <input type="submit" value="Wyślij">
@@ -305,5 +319,6 @@
     <script src="spinner.js"></script>
     <script src="circle.js"></script>
     <script src="scrollbar.js"></script>
+    <script src="scrollToTop.js"></script>
     </body>
 </html>
