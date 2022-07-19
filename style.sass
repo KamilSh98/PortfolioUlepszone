@@ -30,7 +30,7 @@ body
                 width: 30%
                 a
                     h3
-                        padding: 40px 0 0 40px
+                        padding: 25px 0 0 40px
                         margin: 0
                         color: $secondary-color
                         font-size: 2.5rem
@@ -119,6 +119,14 @@ body
                         margin-right: -50%
                         transform: translate(-50%, -50%)
                         &:hover
+        .sticky
+            width: 100%
+            position: fixed
+            left: 0
+            top: 0
+            z-index: 100
+            background: $black-color
+	
 
 
 
@@ -350,6 +358,7 @@ body
                 transition: 0.5s
                 border-radius: 5px
                 overflow: hidden
+                cursor: pointer
                 .imgBox
                     position: absolute
                     top: 0
@@ -503,7 +512,6 @@ body
                     &:hover
                         transform: translate(0, -10px)
 
-                
         .form
             position: relative
             width: 60%
@@ -537,6 +545,10 @@ body
                         margin-bottom: 20px
                         font-weight: 600
                         margin-left: auto
+                        &:hover
+                            background: transparent
+                            color: $secondary-color
+                            border: 1px solid rgba(255, 255, 255, 0.8)
                 #name, #lastname
                     width: 49.5%
                 #lastname
@@ -578,11 +590,110 @@ body
                 height: 100px
             
                 
-    .footer-container
-        height: 400px
+    footer
+        position: relative
+        min-height: 300px
+        width: 100%
         background: $black-color
-        border: 1px solid $black-color
-        border-top-left-radius: 150px
+        margin-top: 350px
+        padding: 20px 40px
+        .waves
+            .wave
+                position: absolute
+                top: -280px
+                left: 0
+                width: 100%
+                background: url(img/wave.svg)
+                background-size: 1000px 400px
+                z-index: 0
+                &#wave1
+                    z-index: 5
+                    opacity: 1
+                    bottom: 0
+                    animation: wave 4s linear infinite
+
+                &#wave2
+                    z-index: 4
+                    opacity: 0.8
+                    bottom: 10px
+                    animation: wave2 5s linear infinite
+                
+                &#wave3
+                    z-index: 3
+                    opacity: 0.6
+                    bottom: 20px
+                    animation: wave3 5s linear infinite
+
+                &#wave4
+                    z-index: 2
+                    opacity: 0.4
+                    bottom: 30px
+                    animation: wave4 4s linear infinite
+                
+                    @keyframes wave 
+                        0%
+                            background-position-x: 0px
+                        100%
+                            background-position-x: 1000px
+                
+                    @keyframes wave2 
+                        0%
+                            background-position-x: 1000px
+                        100%
+                            background-position-x: 0px
+
+                    @keyframes wave3
+                        0%
+                            background-position-x: 0px
+                        100%
+                            background-position-x: 1000px
+                    @keyframes wave4
+                        0%
+                            background-position-x: 1000px
+                        100%
+                            background-position-x: 0px
+        .link-footer
+            display: flex
+            justify-content: center
+            a
+                color: $secondary-color
+                font-size: 3rem
+                padding: 20px
+                cursor: pointer
+                z-index: 99999
+                a:hover
+                    color: $primary-color
+                a:after
+                    content: ""
+                    position: absolute
+                    background-color: $primary-color
+                    height: 3px
+                    width: 0%
+                    left: 0
+                    bottom: -10px
+                    transition: .3s
+                a:hover:after
+                    width:  100%
+        .socials-footer
+            display: flex
+            justify-content: center
+            a
+                color: $secondary-color
+                font-size: 5rem
+                padding: 20px
+                cursor: pointer
+        hr
+            width: 50%
+            margin: 0 auto
+            margin-bottom: 10px
+        .copyright
+            h6
+                text-align: center
+                font-size: 2rem
+                color: $secondary-color
+                font-family: 'Orbitron', cursive
+
+
 
 .spinner-wrapper
     width: 100%
@@ -661,6 +772,7 @@ body
     background: rgba(255, 255, 255, 0.05)
 
 #progressbar
+    z-index: 10
     position: fixed
     top: 0
     right: 0

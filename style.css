@@ -37,7 +37,7 @@ body {
 }
 
 .container header nav .logo a h3 {
-  padding: 40px 0 0 40px;
+  padding: 25px 0 0 40px;
   margin: 0;
   color: #fff;
   font-size: 2.5rem;
@@ -159,6 +159,15 @@ body {
   margin-right: -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.container header .sticky {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #222426;
 }
 
 .container header .main-header {
@@ -600,6 +609,7 @@ body {
   transition: 0.5s;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .container .projects-container .projects-all .project .imgBox {
@@ -897,6 +907,12 @@ body {
   margin-left: auto;
 }
 
+.container .contact-container .form .inputBox input[type="submit"]:hover, .container .contact-container .form .inputBox textarea[type="submit"]:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
 .container .contact-container .form .inputBox #name, .container .contact-container .form .inputBox #lastname {
   width: 49.5%;
 }
@@ -960,11 +976,193 @@ body {
   height: 100px;
 }
 
-.container .footer-container {
-  height: 400px;
+.container footer {
+  position: relative;
+  min-height: 300px;
+  width: 100%;
   background: #222426;
-  border: 1px solid #222426;
-  border-top-left-radius: 150px;
+  margin-top: 350px;
+  padding: 20px 40px;
+}
+
+.container footer .waves .wave {
+  position: absolute;
+  top: -280px;
+  left: 0;
+  width: 100%;
+  background: url(img/wave.svg);
+  background-size: 1000px 400px;
+  z-index: 0;
+}
+
+.container footer .waves .wave#wave1 {
+  z-index: 5;
+  opacity: 1;
+  bottom: 0;
+  -webkit-animation: wave 4s linear infinite;
+          animation: wave 4s linear infinite;
+}
+
+.container footer .waves .wave#wave2 {
+  z-index: 4;
+  opacity: 0.8;
+  bottom: 10px;
+  -webkit-animation: wave2 5s linear infinite;
+          animation: wave2 5s linear infinite;
+}
+
+.container footer .waves .wave#wave3 {
+  z-index: 3;
+  opacity: 0.6;
+  bottom: 20px;
+  -webkit-animation: wave3 5s linear infinite;
+          animation: wave3 5s linear infinite;
+}
+
+.container footer .waves .wave#wave4 {
+  z-index: 2;
+  opacity: 0.4;
+  bottom: 30px;
+  -webkit-animation: wave4 4s linear infinite;
+          animation: wave4 4s linear infinite;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@-webkit-keyframes wave2 {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@-webkit-keyframes wave3 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes wave3 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@-webkit-keyframes wave4 {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes wave4 {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+.container footer .link-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container footer .link-footer a {
+  color: #fff;
+  font-size: 3rem;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.container footer .link-footer a a:hover {
+  color: #378f95;
+}
+
+.container footer .link-footer a a:after {
+  content: "";
+  position: absolute;
+  background-color: #378f95;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container footer .link-footer a a:hover:after {
+  width: 100%;
+}
+
+.container footer .socials-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container footer .socials-footer a {
+  color: #fff;
+  font-size: 5rem;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.container footer hr {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.container footer .copyright h6 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'Orbitron', cursive;
 }
 
 .spinner-wrapper {
@@ -1086,6 +1284,7 @@ body {
 }
 
 #progressbar {
+  z-index: 10;
   position: fixed;
   top: 0;
   right: 0;
