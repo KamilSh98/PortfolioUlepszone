@@ -9,6 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9b668d78e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+
+
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+        jQuery(function($)
+            {
+                $.scrollTo(0);
+                
+                $('#link1').click(function() { $.scrollTo($('#section1'), 500); });
+                $('#link2').click(function() { $.scrollTo($('#section2'), 500); });
+                $('#link3').click(function() { $.scrollTo($('#section3'), 500); });
+        
+                $('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
+            }
+            );
+            
+            $(window).scroll(function()
+            {
+                if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+                else $('.scrollup').fadeOut();		
+            }
+            );
+        </script>
 </head>
 <body> 
     <div class="container">
@@ -19,13 +45,13 @@
                     <a href="#"><h1>Kamil Shaikha</h1></a>
                 </div>
                 <ul>
-                    <li><a href="#">Strona główna</a></li>
-                    <li><a href="#">Umiejętności</a></li>
-                    <li><a href="#">Projekty</a></li>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="#" id="link1">Umiejętności</a></li>
+                    <li><a href="#" id="link2">Projekty</a></li>
                     <a class="socials" href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a class="socials" href="#"><i class="fa-brands fa-linkedin-in"></i></a>  
                     <a class="socials" href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="contactNav" data-text="Kontakt">Kontakt</a>
+                    <a href="#" class="contactNav" data-text="Kontakt" id="link3">Kontakt</a>
                 </ul>
             </nav>
             <div class="main-header">
@@ -47,7 +73,7 @@
                 </div>
             </div>
         </header>
-        <div class="skills-container">
+        <div class="skills-container" id="section1">
             <h4>Umiejętności<i class="fa-solid fa-arrow-trend-up"></i></h4>
             <p>W swojej historii programowania korzystałem z języków takich jak: HTML, CSS + Preprocesor SASS, JavaScript, Bootstrap. Wykonałem także projekt na studiach 
                 z podstaw PHP oraz MySQL. Korzystałem z systemów zarządzania treścią (CMS) takich jak Wordpress oraz Joomla!  </p>
@@ -200,15 +226,108 @@
         </div>
 
 
-        <div class="projects-container">
+        <div class="projects-container" id="section2">
             <h4>Projekty<i class="fa-solid fa-list-check"></i></h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, non molestias temporibus fugit voluptates harum libero tenetur cupiditate praesentium, quibusdam ipsam necessitatibus expedita est vero iusto esse minima assumenda voluptas.</p>
             <div class="project-buttons">
-                <button class="leftButton active">Paczka 1</button>
-                <button class="middleButton">Paczka 2</button>
-                <button class="rightButton">Paczka 3</button>
+                <button id="leftButton" >Paczka 1 - Strony WWW</button>
+                <button id="middleButton">Paczka 2 - JS</button>
+                <button id="rightButton">Paczka 3 - Frameworki (brak)</button>
             </div>
-            <div class="projects-all">
+            <div class="projects-all" id="set1">
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt1.png" style="width: 30vw; height: 300px" alt="projekt1">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 1 - Drukarnia<br><span>HTML, CSS, PHP</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt2.png" style="width: 30vw; height: 300px" alt="projekt2">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 2 - Konfigurator PC<br><span>HTML, CSS</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt3.png" style="width: 30vw; height: 300px" alt="projekt3">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 3 - Drukarnia<br><span>HTML, CSS + SASS, JQuery</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt4.png" style="width: 30vw; height: 300px" alt="projekt4">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 4 - Strona o kulturystach<br><span>Bootstrap</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt5.png" style="width: 30vw; height: 300px" alt="projekt5">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 5 - Strona meblowa<br><span>HTML, SASS</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt11.png" style="width: 30vw; height: 300px" alt="projekt5">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 6 - Pierwsze portfolio<br><span>HTML, SASS, JS, JQuery</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-all" id="set2">
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/projekt6.png" style="width: 30vw; height: 300px" alt="projekt1">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 1 - Notatnik<br><span>Głównie JS</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/projekt7.png" style="width: 30vw; height: 300px" alt="projekt2">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 2 - Kalkulator pomocniczy na siłownie<br><span>Głównie JS</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt8.png" style="width: 30vw; height: 300px" alt="projekt3">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 3 - Kalkulator prosty<br><span>Głównie JS</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt9.png" style="width: 30vw; height: 300px" alt="projekt4">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 4 - Kamień, Papier, Nożyce<br><span>Głównie JS</span></h2>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="imgBox">
+                        <img src="img/Projekt10.png" style="width: 30vw; height: 300px" alt="projekt5">
+                    </div>
+                    <div class="content">
+                        <h2>Projekt 5 - Kreator Hasła<br><span>Głównie JS</span></h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="projects-all" id="set3">
                 <div class="project">
                     <div class="imgBox">
                         <img src="img/Projekt1.png" style="width: 30vw; height: 300px" alt="projekt1">
@@ -222,7 +341,7 @@
                         <img src="img/Projekt2.png" style="width: 30vw; height: 300px" alt="projekt2">
                     </div>
                     <div class="content">
-                        <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
+                        <h2>Projekt 2 - HTML, CSS, PHP<br><span>Crative</span></h2>
                     </div>
                 </div>
                 <div class="project">
@@ -233,35 +352,11 @@
                         <h2>Projekt 3 - HTML, CSS + SASS, JQuery <br><span>Crative</span></h2>
                     </div>
                 </div>
-                <div class="project">
-                    <div class="imgBox">
-                        <img src="img/Projekt4.png" style="width: 30vw; height: 300px" alt="projekt4">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="imgBox">
-                        <img src="img/Projekt5.png" style="width: 30vw; height: 300px" alt="projekt5">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="imgBox">
-                        <img src="img/Projekt6.png" style="width: 30vw; height: 300px" alt="projekt6">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
-                    </div>
-                </div>
             </div>
         </div>
 
 
-        <div class="contact-container">
+        <div class="contact-container" id="section3">
             <div class="square" style="--i:0"></div>
             <div class="square" style="--i:1"></div>
             <div class="square" style="--i:2"></div>
@@ -334,6 +429,7 @@
         <div class="spinner-smaller"></div>
         <h1>K</h1>
     </div>
+    <a href="#" class="scrollup"><i class="fa-solid fa-angles-up"></i></a>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
 
@@ -341,5 +437,23 @@
     <script src="circle.js"></script>
     <script src="scrollbar.js"></script>
     <script src="scrollToTop.js"></script>
+    <script src="projects.js"></script>
+
+    <script>
+        jQuery(function($)
+            {
+                $.scrollTo(0);
+        
+                $('.scrollup').click(function() { $.scrollTo($('body'), 500); });
+            }
+            );
+            
+                $(window).scroll(function()
+            {
+                if($(this).scrollTop()>200) $('.scrollup').fadeIn();
+                else $('.scrollup').fadeOut();		
+            }
+            );
+    </script>
     </body>
 </html>

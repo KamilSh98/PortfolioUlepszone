@@ -531,7 +531,7 @@ body {
 .container .projects-container h4 {
   color: #fff;
   font-size: 5rem;
-  padding: 50px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -572,14 +572,29 @@ body {
   background: #222426;
 }
 
-.container .projects-container .project-buttons button.leftButton {
+.container .projects-container .project-buttons button#leftButton {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  background: #222426;
 }
 
-.container .projects-container .project-buttons button.rightButton {
+.container .projects-container .project-buttons button#rightButton {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.container .projects-container #set2 {
+  display: none;
+}
+
+.container .projects-container #set3 {
+  display: none;
+}
+
+.container .projects-container #set3 .info {
+  width: 80%;
+  font-size: 4rem;
+  text-align: center;
 }
 
 .container .projects-container .projects-all {
@@ -587,24 +602,19 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 30px;
-  padding-bottom: 40px;
+  margin: 30px auto 0 auto;
+  padding-bottom: 30px;
+  width: 80vw;
 }
 
 .container .projects-container .projects-all .project {
   position: relative;
-  width: 30vw;
+  width: 25vw;
   height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 20px;
+  margin-bottom: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 5px;
@@ -1338,5 +1348,34 @@ body {
   background: linear-gradient(225deg, #378f95 25%, #378f95 100%);
   -webkit-filter: blur(10px);
           filter: blur(10px);
+}
+
+.scrollup {
+  display: none;
+  border: 1px solid #fff;
+  width: 64px;
+  height: 64px;
+  text-decoration: none;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 15;
+  background: #222426;
+  border-radius: 5px;
+}
+
+.scrollup i {
+  font-size: 5rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.scrollup:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 /*# sourceMappingURL=style.css.map */
