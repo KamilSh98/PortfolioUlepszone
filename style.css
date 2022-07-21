@@ -133,9 +133,9 @@ body {
 
 .container header nav ul a.socials {
   border: 1.5px solid #fff;
-  border-radius: 10rem;
-  height: 5rem;
-  width: 5rem;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
   position: relative;
   margin: 45px 5px 0 10px;
 }
@@ -213,7 +213,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
 }
 
 .container header .main-header .header-left .header-box a {
@@ -221,7 +220,6 @@ body {
   color: #222426;
   font-weight: 800;
   font-family: 'Roboto', sans-serif;
-  width: 50%;
   text-align: center;
   padding: 30px;
   margin: 30px;
@@ -285,7 +283,7 @@ body {
       grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   justify-items: center;
-  padding-bottom: 40px;
+  padding: 40px;
 }
 
 .container .skills-container .all-skills .skill {
@@ -600,8 +598,8 @@ body {
 .container .projects-container .projects-all {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   margin: 30px auto 0 auto;
   padding-bottom: 30px;
   width: 80vw;
@@ -639,6 +637,8 @@ body {
   opacity: 0.3;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  width: 30vw;
+  height: 300px;
 }
 
 .container .projects-container .projects-all .project .content {
@@ -857,6 +857,10 @@ body {
 .container .contact-container .contact-info .socials a:nth-child(3):hover {
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
+}
+
+.container .contact-container hr {
+  display: none;
 }
 
 .container .contact-container .form {
@@ -1377,5 +1381,163 @@ body {
 .scrollup:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+@media (max-width: 1800px) {
+  .container .contact-container .contact-info p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container header .main-header .header-left {
+    width: 100%;
+  }
+  .container header .main-header .header-right {
+    display: none;
+  }
+  .container .projects-container .projects-all {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .container .projects-container .projects-all .project {
+    width: 35vw;
+  }
+  .container .projects-container .projects-all .project .imgBox img {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container .contact-container {
+    width: 90%;
+    display: block;
+  }
+  .container .contact-container h4 {
+    text-align: center;
+  }
+  .container .contact-container .contact-info {
+    width: 100%;
+    border-right: none;
+  }
+  .container .contact-container .contact-info p {
+    font-size: 3rem;
+  }
+  .container .contact-container hr {
+    display: block;
+  }
+  .container .contact-container .form {
+    width: 100%;
+  }
+  .container .contact-container .inputBox input, .container .contact-container .inputBox textarea {
+    width: 100%;
+  }
+  .container .contact-container .inputBox input::-webkit-input-placeholder, .container .contact-container .inputBox textarea::-webkit-input-placeholder {
+    color: #fff;
+  }
+  .container .contact-container .inputBox input:-ms-input-placeholder, .container .contact-container .inputBox textarea:-ms-input-placeholder {
+    color: #fff;
+  }
+  .container .contact-container .inputBox input::-ms-input-placeholder, .container .contact-container .inputBox textarea::-ms-input-placeholder {
+    color: #fff;
+  }
+  .container .contact-container .inputBox input::placeholder, .container .contact-container .inputBox textarea::placeholder {
+    color: #fff;
+  }
+  .container .contact-container .inputBox #name, .container .contact-container .inputBox #lastname {
+    width: 49.5%;
+  }
+  .container .contact-container .inputBox #lastname {
+    margin-left: 1%;
+  }
+  .container .contact-container .square {
+    display: none;
+  }
+  .container .skills-container .all-skills {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .container .projects-container .project-buttons {
+    display: block;
+  }
+  .container .projects-container .project-buttons button {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .container .projects-container .project-buttons button:hover {
+    background: #222426;
+  }
+  .container .projects-container .project-buttons button#leftButton {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .container .projects-container .project-buttons button#rightButton {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .container .skills-container .all-skills {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .container .projects-container .projects-all {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .container .projects-container .projects-all .project {
+    width: 80vw;
+    margin: 0 auto 30px auto;
+  }
+  .container .projects-container .projects-all .project .imgBox img {
+    width: 80vw;
+  }
+  .container footer .link-footer a {
+    font-size: 2.5rem;
+  }
+  .container .contact-container .contact-info p {
+    font-size: 2.2rem;
+  }
+  .container .contact-container .contact-info h5 {
+    font-size: 2.2rem;
+  }
+  .scrollup {
+    display: none;
+    right: -100px;
+    bottom: -50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container header nav {
+    display: none;
+  }
+  .container header .main-header .header-left .header-box {
+    display: block;
+  }
+  .container header .main-header .header-left .header-box a {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .container .contact-container .contact-info p {
+    font-size: 1.8rem;
+  }
+  .container .contact-container .contact-info h5 {
+    font-size: 1.8rem;
+  }
+  .container .contact-container h4 {
+    font-size: 3rem;
+  }
+  .container .skills-container .all-skills {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .container footer .link-footer a {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

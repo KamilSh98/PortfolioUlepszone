@@ -98,9 +98,9 @@ body
                         color: $primary-color
                 a.socials
                     border: 1.5px solid $secondary-color
-                    border-radius: 10rem
-                    height: 5rem
-                    width: 5rem
+                    border-radius: 10px
+                    height: 50px
+                    width: 50px
                     position: relative
                     margin: 45px 5px 0 10px
                     &:hover
@@ -160,13 +160,11 @@ body
                     margin-bottom: 100px
                 .header-box
                     display: flex
-                    width: 100%
                     a
                         font-size: 2.5rem
                         color: $black-color
                         font-weight: 800
                         font-family: 'Roboto', sans-serif
-                        width: 50%
                         text-align: center
                         padding: 30px
                         margin: 30px
@@ -210,7 +208,7 @@ body
             grid-template-columns: repeat(4, 1fr)
             gap: 40px
             justify-items: center
-            padding-bottom: 40px
+            padding: 40px
             .skill
                 width: 220px
                 height: 220px
@@ -355,7 +353,7 @@ body
                 text-align: center
         .projects-all
             display: grid
-            grid-template-columns: 1fr 1fr 1fr
+            grid-template-columns: repeat(3, 1fr)
             margin: 30px auto 0 auto
             padding-bottom: 30px
             width: 80vw
@@ -382,6 +380,8 @@ body
                         max-width: 100%
                         opacity: 0.3
                         transition: 0.5s
+                        width: 30vw
+                        height: 300px
                 .content
                     position: absolute
                     bottom: 0
@@ -521,7 +521,8 @@ body
                         color: #171515
                     &:hover
                         transform: translate(0, -10px)
-
+        hr
+            display: none
         .form
             position: relative
             width: 60%
@@ -835,3 +836,159 @@ body
         transform: translate(-50%, -50%)
     &:hover
         transform: translateY(-5px)
+
+
+
+
+@media (max-width: 1800px)
+    .container
+        .contact-container
+            h4
+            .contact-info
+                p
+                    font-size: 1.7rem
+  
+
+@media (max-width: 1400px)
+    .container
+        header
+            .main-header
+                .header-left
+                    width: 100%
+                    .header-box
+                .header-right
+                    display: none
+        .projects-container
+            .projects-all
+                grid-template-columns: repeat(2, 1fr)
+                .project
+                    width: 35vw
+                    .imgBox
+                        img
+                            width: 35vw
+
+
+
+
+@media (max-width: 1200px)
+    .container
+        .contact-container
+            width: 90%
+            display: block
+            h4
+                text-align: center
+            .contact-info
+                width: 100%
+                border-right: none
+                p
+                    font-size: 3rem
+            hr
+                display: block
+            .form
+                width: 100%
+            .inputBox
+                input, textarea
+                    width: 100%
+                    &::placeholder
+                        color: $secondary-color
+                    &[type="submit"]
+                        &:hover
+                #name, #lastname
+                    width: 49.5%
+                #lastname
+                    margin-left: 1%
+            .square
+                display: none
+
+        .skills-container
+            .all-skills
+                grid-template-columns: repeat(3, 1fr)
+
+
+
+@media (max-width: 1000px)
+    .container
+        .projects-container
+            .project-buttons
+                display: block
+                button
+                    width: 80%
+                    margin-left: 10%
+                    &:hover
+                        background: $black-color
+                button#leftButton
+                    border-top-left-radius: 0
+                    border-bottom-left-radius: 0
+                button#rightButton
+                    border-top-right-radius: 0
+                    border-bottom-right-radius: 0
+        .skills-container
+            .all-skills
+                grid-template-columns: repeat(2, 1fr)
+        
+
+
+
+@media (max-width: 800px)
+    .container
+        .projects-container
+            .projects-all
+                grid-template-columns: repeat(1, 1fr)
+                .project
+                    width: 80vw
+                    margin: 0 auto 30px auto
+                    .imgBox
+                        img
+                            width: 80vw
+        footer
+            .link-footer
+                a
+                    font-size: 2.5rem
+        .contact-container
+            .contact-info
+                p
+                    font-size: 2.2rem
+                h5
+                    font-size: 2.2rem
+    .scrollup
+        display: none
+        right: -100px
+        bottom: -50px
+
+
+@media (max-width: 600px)
+    .container
+        header
+            nav
+                display: none
+            .main-header
+                .header-left
+                    .header-box
+                        display: block
+                        a
+                            font-size: 1.5rem
+                            width: 100%
+
+        .contact-container
+                .contact-info
+                    p
+                        font-size: 1.8rem
+                    h5
+                        font-size: 1.8rem
+                h4
+                    font-size: 3rem
+        .skills-container
+            .all-skills
+                grid-template-columns: repeat(1, 1fr)
+    
+        footer
+            .link-footer
+                a
+                    font-size: 2rem
+        
+
+
+
+
+
+
