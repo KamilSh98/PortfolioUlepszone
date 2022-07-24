@@ -45,6 +45,19 @@ body
                         width: 35vw
                         font-family: 'Orbitron', cursive
                         font-weight: 600
+            #click
+                display: none
+            label
+                color: $secondary-color
+                font-size: 3rem
+                position: absolute
+                top: 30px
+                right: 30px
+                display: none
+                cursor: pointer
+                z-index: 2001
+                padding: 10px
+                background: $black-color
             ul
                 display: flex
                 justify-content: right
@@ -74,28 +87,6 @@ body
                         transition: .3s
                     a:hover:after
                         width:  100%
-                a.contactNav
-                    position: relative
-                    font-size: 2.6rem
-                    line-height: 1em
-                    color: $secondary-color
-                    border: 1px solid $secondary-color
-                    padding: 20px
-                    margin: 35px auto auto 20px
-                    font-weight: 600
-                    letter-spacing: 2px
-                    font-family: 'Orbitron', cursive
-                    &::before
-                        content: attr(data-text)
-                        position: absolute
-                        color: $secondary-color
-                        width: 0
-                        overflow: hidden
-                        transition: 2s
-                    &:hover::before
-                        width: 100%
-                        -webkit-text-stroke: 1px $primary-color
-                        color: $primary-color
                 a.socials
                     border: 1.5px solid $secondary-color
                     border-radius: 10px
@@ -847,6 +838,34 @@ body
             .contact-info
                 p
                     font-size: 1.7rem
+
+
+@media (max-width: 1530px)
+    .container
+        header
+            nav
+                label
+                    display: block
+                    position: fixed
+                ul
+                    z-index: 2000
+                    position: fixed
+                    top: 0px
+                    left: -110%
+                    background: $black-color
+                    height: 100vh
+                    width: 100%
+                    display: block
+                    text-align: center
+                    transition: all 0.3s ease
+                    padding: 20%
+                    a.socials
+                        display: none
+                #click:checked ~ ul
+                    left: -10%
+                #click:checked ~ .menu-btn i:before
+                    content: "\f00d"
+
   
 
 @media (max-width: 1400px)
@@ -945,6 +964,7 @@ body
                 a
                     font-size: 2.5rem
         .contact-container
+            margin: 75px auto 0px auto
             .contact-info
                 p
                     font-size: 2.2rem
@@ -959,8 +979,6 @@ body
 @media (max-width: 600px)
     .container
         header
-            nav
-                display: none
             .main-header
                 .header-left
                     .header-box
@@ -970,13 +988,14 @@ body
                             width: 100%
 
         .contact-container
-                .contact-info
-                    p
-                        font-size: 1.8rem
-                    h5
-                        font-size: 1.8rem
-                h4
-                    font-size: 3rem
+            margin: 50px auto 0px auto
+            .contact-info
+                p
+                    font-size: 1.8rem
+                h5
+                    font-size: 1.8rem
+            h4
+                font-size: 3rem
         .skills-container
             .all-skills
                 grid-template-columns: repeat(1, 1fr)
