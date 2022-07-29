@@ -1,3 +1,10 @@
-# PortfolioUlepszone
+								Info:
+A repository created to collect files that make up the portfolio on the website: ...
 
-Folder zawiera pliki do portfolio zamieszczonego na stronie: www.https://kamilshaikha.netlify.app/
+								Technology used:
+                
+CSS (SASS) - 55.4%
+
+HTML - 36.3%
+
+JavaScript - 8.2%
