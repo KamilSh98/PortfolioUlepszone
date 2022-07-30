@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9b668d78e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
@@ -59,7 +61,7 @@
                 </ul>
             </nav>
             <div class="main-header">
-                <div class="header-left">
+                <div class="header-left" data-aos="fade-up">
                     <div class="welcome">
                         <p>Witaj na moim portfolio</p>
                     </div>
@@ -78,11 +80,11 @@
             </div>
         </header>
         <div class="skills-container" id="section1">
-            <h4>Umiejętności<i class="fa-solid fa-arrow-trend-up"></i></h4>
-            <p>W swojej historii programowania korzystałem z języków takich jak: HTML, CSS + Preprocesor SASS, JavaScript, Bootstrap. Wykonałem także projekt na studiach 
+            <h4 data-aos="zoom-in-up">Umiejętności<i class="fa-solid fa-arrow-trend-up"></i></h4>
+            <p data-aos="fade-up">W swojej historii programowania korzystałem z języków takich jak: HTML, CSS + Preprocesor SASS, JavaScript, Bootstrap. Wykonałem także projekt na studiach 
                 z podstaw PHP oraz MySQL. Korzystałem z systemów zarządzania treścią (CMS) takich jak Wordpress oraz Joomla!  </p>
             <div class="all-skills">
-                <div class="skill">
+                <div class="skill" data-aos="fade-left">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-html5"></i>
@@ -100,7 +102,7 @@
                     </svg>
                     <p>HTML</p>
                 </div>
-                <div class="skill">
+                <div class="skill" data-aos="fade-left">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-css3"></i>
@@ -118,7 +120,7 @@
                     </svg>
                     <p>CSS</p>
                 </div>
-                <div class="skill">
+                <div class="skill" data-aos="fade-left">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-js"></i>
@@ -136,7 +138,7 @@
                     </svg>
                     <p>JavaScript</p>
                 </div>
-                <div class="skill">
+                <div class="skill" data-aos="fade-left">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-bootstrap"></i>
@@ -154,7 +156,7 @@
                     </svg>
                     <p>Bootstrap</p>
                 </div>
-                <div class="skill">
+                <div class="skill" data-aos="fade-right">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-php"></i>
@@ -172,7 +174,7 @@
                     </svg>
                     <p>PHP</p>
                 </div>
-                <div class="skill">
+                <div class="skill" data-aos="fade-right">
                     <div class="outer">
                         <div class="inner">
                             <i style="font-size: 2rem; font-weight: 600;" >MySQL</i>
@@ -190,7 +192,7 @@
                     </svg>
                     <p>MySQL</p>
                 </div>
-                <div class="skill">
+                <div class="skill" data-aos="fade-right">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-wordpress"></i>
@@ -208,7 +210,7 @@
                     </svg>
                     <p>WordPress</p>
                 </div>
-                <div class="skill">
+                <div class="skill" data-aos="fade-right">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-joomla"></i>
@@ -231,7 +233,7 @@
 
 
         <div class="projects-container" id="section2">
-            <h4>Projekty<i class="fa-solid fa-list-check"></i></h4>
+            <h4 data-aos="zoom-in-up">Projekty<i class="fa-solid fa-list-check"></i></h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, non molestias temporibus fugit voluptates harum libero tenetur cupiditate praesentium, quibusdam ipsam necessitatibus expedita est vero iusto esse minima assumenda voluptas.</p>
             <div class="project-buttons">
                 <button id="leftButton" >Paczka 1 - Strony WWW</button>
@@ -369,7 +371,7 @@
             <div class="square" style="--i:5"></div>
             <div class="square" style="--i:6"></div>
             <div class="contact-info">
-                <h4>Dane</h4>
+                <h4 data-aos="zoom-in-up">Dane</h4>
                 <h5><i class="fa-solid fa-envelope"></i>Email:</h5>
                 <p>kamilshaikha1998@gmail.com</p>
                 <h5><i class="fa-solid fa-envelope"></i>Telefon:</h5>
@@ -382,7 +384,7 @@
             </div>
             <hr>
             <div class="form">
-                <h4>Formularz kontaktowy</h4>
+                <h4 data-aos="zoom-in-up">Formularz kontaktowy</h4>
                 <form action="">
                     <div class="inputBox">
                         <input type="text" name="Imię" placeholder="Imię" id="name">
@@ -443,6 +445,10 @@
     <script src="scrollbar.js"></script>
     <script src="scrollToTop.js"></script>
     <script src="projects.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script>
         jQuery(function($)
