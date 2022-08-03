@@ -4,7 +4,7 @@ let spinnerWrapper = document.querySelector('.spinner-wrapper');
             setTimeout(function(){
             spinnerWrapper.parentElement.removeChild(spinnerWrapper);
             document.body.style.overflow = "auto"
-            }, 2000)
+            }, 4000)
         });
 
 

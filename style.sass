@@ -709,7 +709,7 @@ body
     align-items: center
     justify-content: center
     .spinner 
-        position: relative
+        position: absolute
         width: 16rem
         height: 16rem
         border-radius: 50%
@@ -761,6 +761,65 @@ body
     @keyframes spin
         to
             transform: rotate(360deg)
+
+    .box
+        ul
+            li
+                position: absolute
+                width: 35px
+                height: 35px
+                list-style: none
+                opacity: 0
+                background: radial-gradient($primary-color, transparent, transparent)
+                bottom: 0
+                left: 5vw
+                animation: animate 3s linear infinite
+
+
+                @keyframes animate 
+                    0% 
+                        transform: scale(0)
+                        opacity: 1
+                        bottom: 40
+                        background: radial-gradient($primary-color, transparent, transparent)
+                        transition: all 1s ease-in
+                    70%
+                        background: radial-gradient($secondary-color, transparent, transparent)
+                        transform: scale(5)
+                    100%
+                        transform: scale(10)
+                        background: radial-gradient($secondary-color, transparent, transparent)
+                        opacity: 0
+                        bottom: 100vh
+            li:nth-child(2) 
+                left: 15vw
+                animation-delay: 2s
+            li:nth-child(3) 
+                left: 25vw
+                animation-delay: 3s
+            li:nth-child(4) 
+                left: 35vw
+                animation-delay: 1.3s
+            li:nth-child(5) 
+                left: 45vw
+                animation-delay: 3.3s
+            li:nth-child(6) 
+                left: 55vw
+                animation-delay: 1.5s
+            li:nth-child(7) 
+                left: 65vw
+                animation-delay: 2.5s
+            li:nth-child(8) 
+                left: 75vw
+                animation-delay: 1s
+            li:nth-child(9) 
+                left: 85vw
+                animation-delay: 3.2s
+            li:nth-child(10) 
+                left: 95vw
+                animation-delay: 3.8s
+
+                    
         
 ::-webkit-scrollbar
     width: 0
@@ -804,6 +863,8 @@ body
         height: 100%
         background: linear-gradient(225deg, $primary-color 25%, $primary-color 100%)
         filter: blur(10px)
+    
+
 
 
 .scrollup 
