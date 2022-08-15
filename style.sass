@@ -3,6 +3,9 @@
 $primary-color: rgb(55, 143, 149)
 $black-color: #222426
 $secondary-color: #fff
+$facebook: #4267B2
+$linkedin: #0e76a8
+$github: #171515
 
 *
     margin: 0
@@ -94,13 +97,6 @@ body
                     width: 50px
                     position: relative
                     margin: 45px 5px 0 10px
-                    &:hover
-                        background: $primary-color
-                        -webkit-box-shadow: 0px 0px 5px 5px rgba(55, 143, 149, 1)
-                        -moz-box-shadow: 0px 0px 5px 5px rgba(55, 143, 149, 1)
-                        box-shadow: 0px 0px 5px 5px rgba(55, 143, 149, 1)
-                        i
-                            color: $black-color
                     i
                         font-size: 3rem
                         color: $secondary-color
@@ -108,8 +104,14 @@ body
                         top: 50%
                         left: 50%
                         margin-right: -50%
-                        transform: translate(-50%, -50%)
-                        &:hover
+                        transform: translate(-50%, -50%) 
+                    &:hover
+                        background: $secondary-color
+                        -webkit-box-shadow: 0px 0px 2px 2px $secondary-color
+                        -moz-box-shadow: 0px 0px 2px 2px $secondary-color
+                        box-shadow: 0px 0px 2px 2px $secondary-color 
+                        i
+                            color: $black-color
         .sticky
             width: 100%
             position: fixed
@@ -483,7 +485,7 @@ body
                     background: $secondary-color
                     i
                         font-size: 4rem
-                        color: #4267B2
+                        color: $facebook
                     &:hover
                         transform: translate(0, -10px)
                 a:nth-child(2)
@@ -496,7 +498,7 @@ body
                     background: $secondary-color
                     i
                         font-size: 4rem
-                        color: #0e76a8
+                        color: $linkedin
                     &:hover
                         transform: translate(0, -10px)
                 a:nth-child(3)
@@ -509,7 +511,7 @@ body
                     background: $secondary-color
                     i
                         font-size: 4rem
-                        color: #171515
+                        color: $github
                     &:hover
                         transform: translate(0, -10px)
         hr
@@ -597,63 +599,8 @@ body
         min-height: 300px
         width: 100%
         background: $black-color
-        margin-top: 350px
+        margin-top: 200px
         padding: 20px 40px
-        .waves
-            .wave
-                position: absolute
-                top: -280px
-                left: 0
-                width: 100%
-                background: url(img/wave.svg)
-                background-size: 1000px 400px
-                z-index: 0
-                &#wave1
-                    z-index: 5
-                    opacity: 1
-                    bottom: 0
-                    animation: wave 4s linear infinite
-
-                &#wave2
-                    z-index: 4
-                    opacity: 0.8
-                    bottom: 10px
-                    animation: wave2 5s linear infinite
-                
-                &#wave3
-                    z-index: 3
-                    opacity: 0.6
-                    bottom: 20px
-                    animation: wave3 5s linear infinite
-
-                &#wave4
-                    z-index: 2
-                    opacity: 0.4
-                    bottom: 30px
-                    animation: wave4 4s linear infinite
-                
-                    @keyframes wave 
-                        0%
-                            background-position-x: 0px
-                        100%
-                            background-position-x: 1000px
-                
-                    @keyframes wave2 
-                        0%
-                            background-position-x: 1000px
-                        100%
-                            background-position-x: 0px
-
-                    @keyframes wave3
-                        0%
-                            background-position-x: 0px
-                        100%
-                            background-position-x: 1000px
-                    @keyframes wave4
-                        0%
-                            background-position-x: 1000px
-                        100%
-                            background-position-x: 0px
         .link-footer
             display: flex
             justify-content: center
@@ -682,8 +629,23 @@ body
             a
                 color: $secondary-color
                 font-size: 5rem
-                padding: 20px
+                margin: 20px
                 cursor: pointer
+                border: 1px double $secondary-color
+                border-radius: 5px
+                padding: 3px 7px 0 7px
+            a:nth-child(1)
+                &:hover
+                    color: $facebook
+                    background: $secondary-color
+            a:nth-child(2)
+                &:hover
+                    color: $linkedin
+                    background: $secondary-color
+            a:nth-child(3)
+                &:hover
+                    color: $github
+                    background: $secondary-color
         hr
             width: 50%
             margin: 0 auto
@@ -694,6 +656,24 @@ body
                 font-size: 2rem
                 color: $secondary-color
                 font-family: 'Orbitron', cursive
+    footer::before
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        top: -40px
+        height: 70px
+        background: $black-color
+        transform: skewY(-2deg)
+    footer::after
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        top: -40px
+        height: 70px
+        background: $black-color
+        transform: skewY(2deg)
 
 
 
@@ -713,6 +693,9 @@ body
         width: 16rem
         height: 16rem
         border-radius: 50%
+        -webkit-box-shadow: 0px 0px 40px 25px rgba(66, 68, 90, 1)
+        -moz-box-shadow: 0px 0px 40px 25px rgba(66, 68, 90, 1)
+        box-shadow: 0px 0px 40px 25px rgba(66, 68, 90, 1)
     .spinner::before,
     .spinner:after
         content: ""
@@ -732,8 +715,8 @@ body
         transform: translate(-50%, -50%)
     .spinner-smaller
         position: absolute
-        width: 10rem
-        height: 10rem
+        width: 13rem
+        height: 13rem
         border-radius: 50%
     .spinner-smaller::before,
     .spinner-smaller:after
