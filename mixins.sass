@@ -1,0 +1,13 @@
+@mixin circle
+    fill: none
+    stroke: url(#GradientColor)
+    stroke-width: 20px
+    stroke-dasharray: 625
+    stroke-dashoffset: 625
+
+@mixin blur
+    backdrop-filter: blur(5px)
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1)
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    border-right: 1px solid rgba(255, 255, 255, 0.2)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)    
