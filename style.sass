@@ -1,819 +1,265 @@
+/* Dodawanie powtarzających sie stylów  */
 @import mixins.sass
+
+/* Kolory stałe strony  */    
+$primary: #d6ba57
+$secondary: #000000
+$tertiary: #e5e5e5
+$quertiary: #a37334
     
-$primary-color: rgb(55, 143, 149)
-$black-color: #222426
-$secondary-color: #fff
-$facebook: #4267B2
-$linkedin: #0e76a8
-$github: #171515
+    
 
-*
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-    text-decoration: none
-    font-family: 'Roboto', sans-serif
-
-html
-    font-size: 10px
 
 body
-    overflow: hidden
-
-.container
-    background: linear-gradient(225deg, $black-color 25%, rgba(55, 143, 149, 0.6) 90%), url("img/bg.jpg") no-repeat center center / cover
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    background: url("img/d.jpg")
+    width: 100%
+    font-family: 'Roboto', sans-serif
     header
-        width: 100%
-        height: 100vh
         nav
-            display: flex
-            width: 95vw
-            margin: 0 auto
-            .logo
-                width: 30%
-                a
-                    h3
-                        padding: 25px 0 0 40px
-                        margin: 0
-                        color: $secondary-color
-                        font-size: 2.5rem
-                        text-transform: uppercase
-                        letter-spacing: 3px
-                        font-family: 'Orbitron', cursive
-                    h1
-                        color: $secondary-color
-                        padding: 0px 0 0 40px
-                        font-size: 4rem
-                        letter-spacing: 4px
-                        width: 35vw
-                        font-family: 'Orbitron', cursive
-                        font-weight: 600
-            #click
-                display: none
-            label
-                color: $secondary-color
-                font-size: 3rem
-                position: absolute
-                top: 30px
-                right: 30px
-                display: none
-                cursor: pointer
-                z-index: 2001
-                padding: 10px
-                background: $black-color
+            height: 10vh
+            width: 60vw
+            padding-top: 2.5vh
+            margin-right: auto
+            margin-left: auto
             ul
+                width: 70vw
                 display: flex
-                justify-content: right
-                width: 60%
-                margin-left: 10%
+                justify-content: space-between
                 li
-                    list-style-type: none
-                    padding: 55px 10px 40px 10px
+                    padding-top: 10px
                     a
                         text-decoration: none
-                        color: $secondary-color
-                        font-size: 2rem
-                        font-weight: 600
+                        color: $tertiary
+                        font-size: 1.2rem
                         position: relative
-                        padding: 0 10px
-                        font-family: 'Orbitron', cursive
-                    a:hover
-                        color: $primary-color
-                    a:after
-                        content: ""
-                        position: absolute
-                        background-color: $primary-color
-                        height: 3px
-                        width: 0%
-                        left: 0
-                        bottom: -10px
-                        transition: .3s
-                    a:hover:after
-                        width:  100%
-                a.socials
-                    border: 1.5px solid $secondary-color
-                    border-radius: 10px
-                    height: 50px
-                    width: 50px
-                    position: relative
-                    margin: 45px 5px 0 10px
-                    i
-                        font-size: 3rem
-                        color: $secondary-color
-                        position: absolute
-                        top: 50%
-                        left: 50%
-                        margin-right: -50%
-                        transform: translate(-50%, -50%) 
-                    &:hover
-                        background: $secondary-color
-                        -webkit-box-shadow: 0px 0px 2px 2px $secondary-color
-                        -moz-box-shadow: 0px 0px 2px 2px $secondary-color
-                        box-shadow: 0px 0px 2px 2px $secondary-color 
-                        i
-                            color: $black-color
-        .sticky
-            width: 100%
-            position: fixed
-            left: 0
-            top: 0
-            z-index: 100
-            background: $black-color
-	
-
-
-
-        .main-header
-            display: flex
-            width: 90vw
-            height: 80%
-            .header-left
-                width: 68%
-                margin: auto
-                margin-left: 5vw
-                h2
-                    font-size: 5rem
-                    color: $primary-color
-                    font-weight: 600
-                    color: $secondary-color
-                    font-family: 'Orbitron', cursive
-                .welcome
-                    p
-                        font-size: 2rem
-                        border: 1px solid $secondary-color
-                        width: 280px
-                        padding: 10px
-                        color: $primary-color
-                        background: $secondary-color
-                        font-weight: bolder
-                        font-family: 'Orbitron', cursive
-                p.review
-                    font-size: 2rem
-                    color: $secondary-color
-                    margin-bottom: 100px
-                .header-box
-                    display: flex
-                    a
-                        font-size: 2.5rem
-                        color: $black-color
-                        font-weight: 800
-                        font-family: 'Roboto', sans-serif
-                        text-align: center
-                        padding: 30px
-                        margin: 30px
-                        background: $secondary-color
-                        border: 2px solid $black-color
-                        i
-                            margin-left: 5px
-            .header-right
-                margin: auto
-                width: 30%
-                display: flex
-                justify-content: center
-                justify-items: center
-                img
-                    border: 1px solid $secondary-color
-                    border-radius: 100%
-
-
-    .skills-container
-        width: 90vw
-        margin: auto
-        border-radius: 10vh
-        background: $black-color
-        h4
-            color: $secondary-color
-            font-size: 5rem
-            padding: 50px
-            text-align: center
-            i
-                margin-left: 15px
-        p
-            font-size: 2rem
-            width: 80%
-            text-align: center
-            margin: 0 auto
-            color: $secondary-color
-            margin-bottom: 40px
-        .all-skills
-            position: relative
-            display: grid
-            grid-template-columns: repeat(4, 1fr)
-            gap: 40px
-            justify-items: center
-            padding: 40px
-            .skill
-                width: 220px
-                height: 220px
-                position: relative
-                margin-bottom: 50px
-                .outer
-                    height: 220px
-                    width: 220px
-                    border-radius: 50%
-                    box-shadow: 0px 0px 5px 4px $primary-color
-                    padding: 20px
-                    .inner
-                        height: 180px
-                        width: 180px
-                        border-radius: 50%
-                        display: flex
-                        align-items: center
-                        justify-content: center
-                        box-shadow: inset 4px 4px 6px -1px $primary-color, inset -4px -4px 6px -1px $primary-color, -0.5px -0.5px 0px $primary-color
-                        #numberHTML, #numberCSS, #numberJS, #numberBootstrap, #numberPHP, #numberMYSQL, #numberWordpress, #numberJoomla
-                            font-weight: 600
-                            color: $primary-color
-                            font-size: 3rem
-                        i
-                            font-size: 4rem
-                            color: $primary-color
-                            margin-right: 10px
-                p
-                    font-size: 3.5rem
-                    padding: 10px
-                    font-family: 'Orbitron', cursive
-                    color: $primary-color
-                    text-align: center
-                svg
-                    position: absolute
-                    top: 0
-                    left: 0
-                    circle.HTML
-                        @include circle
-                        animation: animationCircleHTML 2s linear forwards
-
-                        @keyframes animationCircleHTML
-                            100%
-                                stroke-dashoffset: 93
-                    circle.CSS
-                        @include circle
-                        animation: animationCircleCSS 2s linear forwards
-
-                        @keyframes animationCircleCSS
-                            100%
-                                stroke-dashoffset: 125
-                    circle.JS
-                        @include circle
-                        animation: animationCircleJS 2s linear forwards
-
-                        @keyframes animationCircleJS
-                            100%
-                                stroke-dashoffset: 312.5
-                    circle.Bootstrap
-                        @include circle
-                        animation: animationCircleBootstrap 2s linear forwards
-
-                        @keyframes animationCircleBootstrap
-                            100%
-                                stroke-dashoffset: 250
-                    circle.PHP
-                        @include circle
-                        animation: animationCirclePHP 2s linear forwards
-
-                        @keyframes animationCirclePHP
-                            100%
-                                stroke-dashoffset: 531
-                    circle.MYSQL
-                        @include circle
-                        animation: animationCircleMYSQL 2s linear forwards
-
-                        @keyframes animationCircleMYSQL
-                            100%
-                                stroke-dashoffset: 500
-                    circle.Wordpress
-                        @include circle
-                        animation: animationCircleWordpress 2s linear forwards
-
-                        @keyframes animationCircleWordpress
-                            100%
-                                stroke-dashoffset: 406
-                    circle.Joomla
-                        @include circle
-                        animation: animationCircleJoomla 2s linear forwards
-
-                        @keyframes animationCircleJoomla
-                            100%
-                                stroke-dashoffset: 437.5
-
-    .projects-container
-        background: $black-color
-        margin-top: 75px
-        h4
-            color: $secondary-color
-            font-size: 5rem
-            padding: 30px
-            text-align: center
-            i
-                margin-left: 15px
-        p
-            font-size: 2rem
-            width: 70%
-            text-align: center
-            margin: 0 auto
-            color: $secondary-color
-            margin-bottom: 40px
-        .project-buttons
-            display: flex
-            justify-content: center
-            button
-                height: 70px
-                background: #444648
-                border: 1px solid $secondary-color
-                width: calc(65%/3)
-                font-size: 2rem
-                color: $secondary-color
-                font-weight: 500
-                cursor: pointer
-                &:hover
-                    background: $black-color
-            button#leftButton
-                border-top-left-radius: 30px
-                border-bottom-left-radius: 30px
-                background: $black-color
-            button#middleButton
-            button#rightButton
-                border-top-right-radius: 30px
-                border-bottom-right-radius: 30px
-        #set1
-        #set2
-            display: none
-        #set3
-            display: none
-            .info
-                width: 80%
-                font-size: 4rem
-                text-align: center
-        .projects-all
-            display: grid
-            grid-template-columns: repeat(3, 1fr)
-            margin: 30px auto 0 auto
-            padding-bottom: 30px
-            width: 80vw
-            .project
-                position: relative
-                width: 25vw
-                height: 320px
-                display: flex
-                margin-bottom: 20px
-                transition: 0.5s
-                border-radius: 5px
-                overflow: hidden
-                cursor: pointer
-                .imgBox
-                    position: absolute
-                    top: 0
-                    left: 0
-                    width: 100%
-                    height: 300px
-                    padding: 10px
-                    box-sizing: border-box
-                    z-index: 1
-                    img
-                        max-width: 100%
-                        opacity: 0.3
-                        transition: 0.5s
-                        width: 30vw
-                        height: 300px
-                .content
-                    position: absolute
-                    bottom: 0
-                    left: 10px
-                    right: 10px
-                    bottom: 10px
-                    height: 80px
-                    background: rgba(0, 0, 0, 0.7)
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    text-align: center
-                    opacity: 0
-                    transition: .5s
-                    z-index: 1
-                    h2
-                        font-size: 20px
-                        color: $secondary-color
-                        font-weight: 600
-                        line-height: 20px
+                        text-transform: uppercase
                         letter-spacing: 1px
-                        span
-                            font-size: 14px
-                            color: $secondary-color
-                            font-weight: 200
-                            line-height: 20px
-                            letter-spacing: 1px
-                &:before
-                    content: ''
-                    position: absolute
-                    top: 5px
-                    bottom: 5px
-                    left: 5px
-                    right: 5px
-                    background: linear-gradient(225deg, $black-color 20%, rgba(55, 143, 149, 0.6) 100%)
-                    z-index: 1
-                &:after
-                    content: ''
-                    position: absolute
-                    top: 4px
-                    bottom: 4px
-                    left: 4px
-                    right: 4px
-                    background: linear-gradient(225deg, $secondary-color 20%, rgba(55, 143, 149, 1) 100%)
-                    filter: blur(8px)
-                    z-index: 0
-            .project:hover
-                height: 400px
-                .imgBox
-                    img
-                        opacity: 1
-                .content
-                    opacity: 1
-
-
-    .contact-container
-        box-sizing: border-box
-        position: relative
-        width: 70vw
-        min-height: 400px
-        background: rgba(255, 255, 255, 0.1)
-        display: flex
-        justify-content: center
-        align-items: center
-        @include blur
-        border-radius: 20px
-        margin: 150px auto 150px auto
-        h4
-            position: relative
-            color: $secondary-color
-            font-weight: 600
-            letter-spacing: 2px
-            margin-bottom: 40px
-            font-size: 4rem
-            padding: 30px
-            text-align: center
-            font-family: 'Orbitron', cursive
-        .contact-info
-            width: 40%
-            height: 100%
-            padding: 40px
-            border-right: 1px solid $secondary-color
-            p
-                font-size: 2.5rem
-                color: $secondary-color
-                font-family: 'Orbitron', cursive
-            h5
-                font-size: 3rem
-                color: $secondary-color
-                font-family: 'Orbitron', cursive
-                i
-                    font-size: 4rem
-                    margin-right: 10px
-            .socials
-                display: flex
-                font-size: 3rem
-                color: $secondary-color
-                width: 100%
-                justify-content: center
-                position: relative
-                a:nth-child(1)
-                    margin: 60px 20px 0px 20px
-                    padding: 6px
-                    border: 1px solid $secondary-color
-                    border-radius: 5px
-                    transition: .6s
-                    box-shadow: 0 3px 2px rgba(255,255,255,.5)
-                    background: $secondary-color
-                    i
-                        font-size: 4rem
-                        color: $facebook
-                    &:hover
-                        transform: translate(0, -10px)
-                a:nth-child(2)
-                    margin: 60px 20px 0px 20px
-                    padding: 6px
-                    border: 1px solid $secondary-color
-                    border-radius: 5px
-                    transition: .6s
-                    box-shadow: 0 3px 2px rgba(255,255,255,.5)
-                    background: $secondary-color
-                    i
-                        font-size: 4rem
-                        color: $linkedin
-                    &:hover
-                        transform: translate(0, -10px)
-                a:nth-child(3)
-                    margin: 60px 20px 0px 20px
-                    padding: 6px
-                    border: 1px solid $secondary-color
-                    border-radius: 5px
-                    transition: .6s
-                    box-shadow: 0 3px 2px rgba(255,255,255,.5)
-                    background: $secondary-color
-                    i
-                        font-size: 4rem
-                        color: $github
-                    &:hover
-                        transform: translate(0, -10px)
-        hr
-            display: none
-        .form
-            position: relative
-            width: 60%
-            height: 100%
-            padding: 40px
-            z-index: 4
-            .inputBox
-                width: 100%
-                margin-top: 20px
-                display: flex
-                input, textarea
-                    width: 100%
-                    background: rgba(255, 255, 255, 0.2)
-                    border: none
-                    outline: none
-                    padding: 10px 20px
-                    border-radius: 35px
-                    border: 1px solid rgba(255, 255, 255, 0.5)
-                    border-right: 1px solid rgba(255, 255, 255, 0.2)
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
-                    font-size: 2rem
-                    color: #fff
-                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05)
-                    &::placeholder
-                        color: $secondary-color
-                    &[type="submit"]
-                        background: $secondary-color
-                        color: $primary-color
-                        max-width: 300px
-                        cursor: pointer
-                        margin-bottom: 20px
-                        font-weight: 600
-                        margin-left: auto
                         &:hover
-                            background: transparent
-                            color: $secondary-color
-                            border: 1px solid rgba(255, 255, 255, 0.8)
-                #name, #lastname
-                    width: 49.5%
-                #lastname
-                    margin-left: 1%
-        .square
-            position: absolute
-            background: rgba(255, 255, 255, 0.1)
-            @include blur
-            border-radius: 20px
-            &:nth-child(1)
-                top: -70px
-                right: -100px
-                width: 200px
-                height: 200px
-            &:nth-child(2)
-                top: 680px
-                right: 600px
-                width: 200px
-                height: 120px
-            &:nth-child(3)
-                top: 200px
-                right: 1300px
-                width: 80px
-                height: 80px
-            &:nth-child(4)
-                top: -80px
-                right: 1000px
-                width: 140px
-                height: 140px
-            &:nth-child(5)
-                top: 500px
-                right: 1100px
-                width: 130px
-                height: 120px
-            &:nth-child(6)
-                top: 400px
-                right: -150px
-                width: 100px
-                height: 100px
-            
-                
-    footer
-        position: relative
-        min-height: 300px
-        width: 100%
-        background: $black-color
-        margin-top: 200px
-        padding: 20px 40px
-        .link-footer
+                            color: $primary
+                        &:after
+                            content: ""
+                            position: absolute
+                            background-color: $primary
+                            height: 3px
+                            width: 0%
+                            left: 0
+                            bottom: -4px
+                            transition: .3s
+                        &:hover:after
+                            width:  100%
+                li:first-child
+                    margin-right: 550px
+                button
+                    background: linear-gradient(225deg, $quertiary 0%, $primary 100%)
+                    border: 1px solid $primary
+                    padding: 10px
+                    font-weight: 700
+                    font-size: 1rem
+                    text-transform: uppercase
+                    font-weight: 600
+                    &:hover
+                        transform: scale(1.05)
+                        cursor: pointer
+        .header-main
             display: flex
-            justify-content: center
-            a
-                color: $secondary-color
-                font-size: 3rem
-                padding: 20px
-                cursor: pointer
-                z-index: 99999
-                a:hover
-                    color: $primary-color
-                a:after
-                    content: ""
-                    position: absolute
-                    background-color: $primary-color
-                    height: 3px
-                    width: 0%
-                    left: 0
-                    bottom: -10px
-                    transition: .3s
-                a:hover:after
-                    width:  100%
-        .socials-footer
-            display: flex
-            justify-content: center
-            a
-                color: $secondary-color
-                font-size: 5rem
-                margin: 20px
-                cursor: pointer
-                border: 1px double $secondary-color
-                border-radius: 5px
-                padding: 3px 7px 0 7px
-            a:nth-child(1)
-                &:hover
-                    color: $facebook
-                    background: $secondary-color
-            a:nth-child(2)
-                &:hover
-                    color: $linkedin
-                    background: $secondary-color
-            a:nth-child(3)
-                &:hover
-                    color: $github
-                    background: $secondary-color
-        hr
-            width: 50%
-            margin: 0 auto
-            margin-bottom: 10px
-        .copyright
-            h6
+            height: 87.5vh
+            img
+                width: 70vw
+            .text-header
+                width: 25vw
+                height: 87.5vh
+                margin-top: 25vh
+                margin-left: 5vw
                 text-align: center
-                font-size: 2rem
-                color: $secondary-color
-                font-family: 'Orbitron', cursive
-    footer::before
-        content: ""
-        position: absolute
-        left: 0
-        right: 0
-        top: -40px
-        height: 70px
-        background: $black-color
-        transform: skewY(-2deg)
-    footer::after
-        content: ""
-        position: absolute
-        left: 0
-        right: 0
-        top: -40px
-        height: 70px
-        background: $black-color
-        transform: skewY(2deg)
+                h1
+                    font-size: 4.5rem
+                    color: $tertiary
+                    margin: 0
+                    text-transform: uppercase
+                    font-family: 'Comforter Brush', cursive
+                    letter-spacing: 15px
+                h2
+                    font-size: 2.5rem
+                    color: $tertiary
+                    margin: 0
+                    span
+                        color: $primary
+                button
+                    background: $secondary
+                    border: 5px double $tertiary
+                    height: 100px
+                    width: 100px
+                    position: relative
+                    margin-top: 20px
+                    span
+                        color: $primary
+                        font-size: 3rem
+                        letter-spacing: 10px
+                        text-transform: uppercase
+                        text-decoration: underline
+                        position: absolute
+                        left: 50%
+                        top: 50%
+                        transform: translate(-50%, -50%)
+                        font-weight: 800
+                        &:hover
+                            text-shadow: 1px 1px 1px $tertiary                     
+                            animation: animationButton 3s linear infinite
+                        
+                            @keyframes animationButton
+                                0%
+                                    position: absolute
+                                    left: 50%
+                                    top: 50%
+                                50%
+                                    position: absolute
+                                    left: 150%
+                                    top: 50%
+                                80% 
+                                    position: absolute
+                                    left: -50%
+                                    top: 50%
+                                100% 
+                                    position: absolute
+                                    left: 50%
+                                    top: 50%
 
 
 
-.spinner-wrapper
-    width: 100%
-    height: 100%
-    background-color: $black-color
-    position: absolute
-    top: 0
-    left: 0
-    z-index: 9999
-    display: flex
-    align-items: center
-    justify-content: center
-    .spinner 
-        position: absolute
-        width: 16rem
-        height: 16rem
-        border-radius: 50%
-        -webkit-box-shadow: 0px 0px 40px 25px rgba(66, 68, 90, 1)
-        -moz-box-shadow: 0px 0px 40px 25px rgba(66, 68, 90, 1)
-        box-shadow: 0px 0px 40px 25px rgba(66, 68, 90, 1)
-    .spinner::before,
-    .spinner:after
-        content: ""
-        position: absolute
-        border-radius: 50%
-    .spinner:before 
-        width: 100%
-        height: 100%
-        background-image: linear-gradient(90deg, $primary-color 0%,$secondary-color 100%)
-        animation: spin .5s infinite linear
-    .spinner:after 
-        width: 90%
-        height: 90%
-        background-color: $black-color
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-    .spinner-smaller
-        position: absolute
-        width: 13rem
-        height: 13rem
-        border-radius: 50%
-    .spinner-smaller::before,
-    .spinner-smaller:after
-        content: ""
-        position: absolute
-        border-radius: 50%
-    .spinner-smaller:before 
-        width: 100%
-        height: 100%
-        background-image: linear-gradient(220deg, $primary-color 0%,$secondary-color 100%)
-        animation: spin .5s infinite linear
-    .spinner-smaller:after 
-        width: 90%
-        height: 90%
-        background-color: $black-color
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-    h1
-        position: absolute
-        font-size: 4rem
-        font-family: 'Orbitron', cursive
-        color: $primary-color
-        
-    @keyframes spin
-        to
-            transform: rotate(360deg)
 
-    .box
-        ul
-            li
-                position: absolute
-                width: 35px
-                height: 35px
-                list-style: none
-                opacity: 0
-                background: radial-gradient($primary-color, transparent, transparent)
-                bottom: 0
-                left: 5vw
-                animation: animate 3s linear infinite
+    section
+        position: relative
+        background: $secondary
+        .contactUs
+            width: 86vw
+            height: 300px
+            position: absolute
+            top: 10%
+            left: 50%
+            transform: translate(-50%, -25%)
+            z-index: 5
+            background: $secondary
+            border-radius: 160px
+            border: 1vw double $primary
+            .contactInfo
+                h3
+                    color: $primary
+                    text-align: center
+                    font-size: 2rem
+            .possibleContacts
+                width: 60%
+                margin: 0 auto
+                display: flex
+                justify-content: space-around
+                .mail, .phone, .live
+                    h4, i
+                        text-align: center
+                        color: $tertiary
+                        font-size: 1.5rem
 
 
-                @keyframes animate 
-                    0% 
-                        transform: scale(0)
-                        opacity: 1
-                        bottom: 40
-                        background: radial-gradient($primary-color, transparent, transparent)
-                        transition: all 1s ease-in
-                    70%
-                        background: radial-gradient($secondary-color, transparent, transparent)
-                        transform: scale(5)
-                    100%
-                        transform: scale(10)
-                        background: radial-gradient($secondary-color, transparent, transparent)
-                        opacity: 0
-                        bottom: 100vh
-            li:nth-child(2) 
-                left: 15vw
-                animation-delay: 2s
-            li:nth-child(3) 
-                left: 25vw
-                animation-delay: 3s
-            li:nth-child(4) 
-                left: 35vw
-                animation-delay: 1.3s
-            li:nth-child(5) 
-                left: 45vw
-                animation-delay: 3.3s
-            li:nth-child(6) 
-                left: 55vw
-                animation-delay: 1.5s
-            li:nth-child(7) 
-                left: 65vw
-                animation-delay: 2.5s
-            li:nth-child(8) 
-                left: 75vw
-                animation-delay: 1s
-            li:nth-child(9) 
-                left: 85vw
-                animation-delay: 3.2s
-            li:nth-child(10) 
-                left: 95vw
-                animation-delay: 3.8s
 
-                    
-        
+
+
+
+
+
+    footer
+        background: $secondary
+        margin-top: 400px
+        .info
+            display: flex
+            width: 70%
+            color: $primary
+            margin: 0 auto
+            .contact, .open, .about, .links
+                width: 25%
+                padding: 20px
+                i
+                    margin-right: 8px
+                h5
+                    font-size: 1.5rem
+                    text-transform: uppercase
+                    margin: 0 0 25px 0
+                h6
+                    font-size: 1rem
+                    margin: 0
+                    padding: 2px
+                    a
+                        color: $primary
+                        text-decoration: none
+                        &:hover
+                            color: $tertiary
+                    &:hover
+                        color: $tertiary
+                    i
+                        margin-right: 8px
+        .newsletter, .priv
+            width: 60%
+            color: $primary
+            display: flex
+            margin: 0 auto
+            .info-news
+                h5
+                    font-size: 1.5rem
+                    text-transform: uppercase
+                    margin: 0 0 10px 0
+                h6
+                    font-size: 1rem
+                    margin: 0
+                    padding: 2px
+            h5
+                margin-left: 100px
+                i
+                    font-size: 1.1rem
+                    border: 1px solid $primary
+                    padding: 10px
+                input
+                    padding: 10px
+                button
+                    padding: 10px
+        .socials
+            justify-content: center
+            display: flex
+            a
+                i
+                    font-size: 2.5rem
+                    color: $primary
+                    margin-top: 2vw
+                    margin-right: 1vw
+                    margin-left: 1vw
+                i:hover
+                    transform: translateY(-6px) scale(1.1)
+        hr
+            margin-top: 1%
+            width: 80vw
+            border-color: $primary
+        .copyright
+            display: flex
+            justify-content: space-between
+            p
+                margin: 0 auto
+                padding: 10px 0 10px 0
+                color: $primary
+                a
+                    text-decoration: none
+                    color: $primary
+                    font-weight: 800
+
+
+
+
+
+
+
+
+
+/* Zmiana scrollbar'a  */    
 ::-webkit-scrollbar
     width: 0
-
-#scrollPath
-    position: fixed
-    top: 0
-    right: 0
-    width: 10px
-    height: 100%
-    background: rgba(255, 255, 255, 0.05)
 
 #progressbar
     z-index: 10
@@ -821,13 +267,7 @@ body
     top: 0
     right: 0
     width: 10px
-    background: linear-gradient(225deg, $primary-color 25%, $primary-color 100%)
-    animation: animationScrollbar 5s linear infinite
-    @keyframes animationScrollbar 
-        0%, 100%
-            filter: hue-rotate(0deg)
-        50%
-            filter: hue-rotate(40deg)
+    background: linear-gradient(225deg, $secondary 0%, $primary 100%)
     &:before
         content: ''
         position: absolute
@@ -835,8 +275,8 @@ body
         left: 0
         width: 100%
         height: 100%
-        background: linear-gradient(225deg, $primary-color 25%, $primary-color 100%)
-        filter: blur(10px)
+        background: linear-gradient(225deg, $secondary 0%, $primary 100%)
+        filter: blur(5px)
     &:after
         content: ''
         position: absolute
@@ -844,214 +284,7 @@ body
         left: 0
         width: 100%
         height: 100%
-        background: linear-gradient(225deg, $primary-color 25%, $primary-color 100%)
-        filter: blur(10px)
-    
-
-
-
-.scrollup 
-    display: none
-    border: 1px solid $secondary-color
-    width: 64px
-    height: 64px
-    text-decoration: none
-    position: fixed
-    right: 50px
-    bottom: 50px
-    z-index: 15
-    background: $black-color
-    border-radius: 5px
-    i
-        font-size: 5rem
-        color: $secondary-color
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-    &:hover
-        transform: translateY(-5px)
-
-
-
-
-@media (max-width: 1800px)
-    .container
-        .contact-container
-            h4
-            .contact-info
-                p
-                    font-size: 1.7rem
-
-
-@media (max-width: 1530px)
-    .container
-        header
-            nav
-                label
-                    display: block
-                    position: fixed
-                ul
-                    z-index: 2000
-                    position: fixed
-                    top: 0px
-                    left: -110%
-                    background: $black-color
-                    height: 100vh
-                    width: 100%
-                    display: block
-                    text-align: center
-                    transition: all 0.3s ease
-                    padding: 20%
-                    a.socials
-                        display: none
-                #click:checked ~ ul
-                    left: -10%
-                #click:checked ~ .menu-btn i:before
-                    content: "\f00d"
-
-  
-
-@media (max-width: 1400px)
-    .container
-        header
-            .main-header
-                .header-left
-                    width: 100%
-                    .header-box
-                .header-right
-                    display: none
-        .projects-container
-            .projects-all
-                grid-template-columns: repeat(2, 1fr)
-                .project
-                    width: 35vw
-                    .imgBox
-                        img
-                            width: 35vw
-
-
-
-
-@media (max-width: 1200px)
-    .container
-        .contact-container
-            width: 90%
-            display: block
-            h4
-                text-align: center
-            .contact-info
-                width: 100%
-                border-right: none
-                p
-                    font-size: 3rem
-            hr
-                display: block
-            .form
-                width: 100%
-            .inputBox
-                input, textarea
-                    width: 100%
-                    &::placeholder
-                        color: $secondary-color
-                    &[type="submit"]
-                        &:hover
-                #name, #lastname
-                    width: 49.5%
-                #lastname
-                    margin-left: 1%
-            .square
-                display: none
-
-        .skills-container
-            .all-skills
-                grid-template-columns: repeat(3, 1fr)
-
-
-
-@media (max-width: 1000px)
-    .container
-        .projects-container
-            .project-buttons
-                display: block
-                button
-                    width: 80%
-                    margin-left: 10%
-                    &:hover
-                        background: $black-color
-                button#leftButton
-                    border-top-left-radius: 0
-                    border-bottom-left-radius: 0
-                button#rightButton
-                    border-top-right-radius: 0
-                    border-bottom-right-radius: 0
-        .skills-container
-            .all-skills
-                grid-template-columns: repeat(2, 1fr)
+        background: linear-gradient(225deg, $secondary 0%, $primary 100%)
+        filter: blur(5px)
         
-
-
-
-@media (max-width: 800px)
-    .container
-        .projects-container
-            .projects-all
-                grid-template-columns: repeat(1, 1fr)
-                .project
-                    width: 80vw
-                    margin: 0 auto 30px auto
-                    .imgBox
-                        img
-                            width: 80vw
-        footer
-            .link-footer
-                a
-                    font-size: 2.5rem
-        .contact-container
-            margin: 75px auto 0px auto
-            .contact-info
-                p
-                    font-size: 2.2rem
-                h5
-                    font-size: 2.2rem
-    .scrollup
-        display: none
-        right: -100px
-        bottom: -50px
-
-
-@media (max-width: 600px)
-    .container
-        header
-            .main-header
-                .header-left
-                    .header-box
-                        display: block
-                        a
-                            font-size: 1.5rem
-                            width: 100%
-
-        .contact-container
-            margin: 50px auto 0px auto
-            .contact-info
-                p
-                    font-size: 1.8rem
-                h5
-                    font-size: 1.8rem
-            h4
-                font-size: 3rem
-        .skills-container
-            .all-skills
-                grid-template-columns: repeat(1, 1fr)
-    
-        footer
-            .link-footer
-                a
-                    font-size: 2rem
-        
-
-
-
-
-
-
+/* Zmiana scrollbar'a Koniec  */    

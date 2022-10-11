@@ -4,474 +4,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Nazwa</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9b668d78e6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-
-
-    <script src="jquery.scrollTo.min.js"></script>
-    <script>
-        jQuery(function($)
-            {
-                $.scrollTo(0);
-                
-                $('#link1').click(function() { $.scrollTo($('#section1'), 500); });
-                $('#link2').click(function() { $.scrollTo($('#section2'), 500); });
-                $('#link3').click(function() { $.scrollTo($('#section3'), 500); });
-        
-                $('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
-            }
-            );
-            
-            $(window).scroll(function()
-            {
-                if($(this).scrollTop()>300) $('.scrollup').fadeIn();
-                else $('.scrollup').fadeOut();		
-            }
-            );
-        </script>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<body> 
-    <div class="container">
-        <header>
-            <nav id="sec">
-                <div class="logo">
-                    <a href="#"><h3>Porfolio</h3></a>
-                    <a href="#"><h1>Kamil Shaikha</h1></a>
-                </div>
-                <input type="checkbox" id="click">
-                <label for="click" class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </label>
-                <ul>
-                    <li><a href="index.html">Strona główna</a></li>
-                    <li><a href="#" id="link1">Umiejętności</a></li>
-                    <li><a href="#" id="link2">Projekty</a></li>
-                    <li><a href="#" id="link3">Kontakt</a></li>
-                    <a class="socials" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="socials" href="#"><i class="fa-brands fa-linkedin-in"></i></a>  
-                    <a class="socials" href="#"><i class="fa-brands fa-github"></i></a>
-                </ul>
-            </nav>
-            <div class="main-header">
-                <div class="header-left" data-aos="fade-up">
-                    <div class="welcome">
-                        <p data-aos="fade-left">Witaj na moim portfolio</p>
-                    </div>
-                    <h2 data-aos="fade-left">Nazywam sie Kamil Shaikha</h2>
-                    <p class="review" data-aos="fade-right">Jestem studentem V roku zarządzania i inżynierii produkcji na Politechnice Rzeszowskiej. W marcu 2022 roku otrzymałem tytuł inżyniera. 
-                        W wolnych chwilach staram się rozwijać umiejętności z dziedziny programowania, aby
-                        w najbliższej przyszłości móc zostać frontend developerem. </p>
-                    <div class="header-box" data-aos="fade-left">
-                        <a href="">Skontakuj się ze mną<i class="fa-solid fa-angles-right"></i></a></br>
-                        <a href="" style="background: #222426; color: #fff">Pobierz moje CV<i class="fa-solid fa-download"></i></a>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <img src="img/portret.jpg" width="400px" height="400px" alt="portret">
-                </div>
+<body>
+    <header>
+        <!-- Nawigacja Start-->
+        <nav>
+            <ul>
+                <li><a href="">Logo</a></li>
+                <li><a href="">O nas</a></li>
+                <li><a href="">Oferta</a></li>
+                <li><a href="">Cennik</a></li>
+                <li><a href="">Kontakt</a></li>
+                <button>Umów się do nas</button>
+            </ul>
+        </nav>
+        <!-- Nawigacja Stop-->
+        <!-- Nagłówek Start-->
+        <div class="header-main">
+            <div class="text-header">
+                <h1>Manhattan</h1>
+                <h2>Odkryj <span>piękno</span>,<br> które tkwi w tobie...</h2>
+                <button type="submit" href="#"><a href="#"><span>Oferta</span></a></button>
             </div>
-        </header>
-        <div class="skills-container" id="section1">
-            <h4 data-aos="zoom-in-up">Umiejętności<i class="fa-solid fa-arrow-trend-up"></i></h4>
-            <p data-aos="fade-up">W swojej historii programowania korzystałem z języków takich jak: HTML, CSS + Preprocesor SASS, JavaScript, Bootstrap. Wykonałem także projekt na studiach 
-                z podstaw PHP oraz MySQL. Korzystałem z systemów zarządzania treścią (CMS) takich jak Wordpress oraz Joomla!  </p>
-            <div class="all-skills">
-                <div class="skill" data-aos="fade-left">
-                    <div class="outer">
-                        <div class="inner">
-                            <i class="fa-brands fa-html5"></i>
-                            <div id="numberHTML"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="HTML" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>HTML</p>
+            <img src="img/peakpx-removebg.png">
+        </div>
+        <!-- Nagłówek Stop-->
+    </header>
+
+    <section>
+        <div class="contactUs">
+            <div class="contactInfo">
+                <h3>Umów się na wizytę w naszym salonie</h3>
+            </div>
+            <div class="possibleContacts">
+                <div class="mail">
+                    <i class="fa-solid fa-at"></i>
+                    <h4>Napisz do nas</h4>
                 </div>
-                <div class="skill" data-aos="fade-left">
-                    <div class="outer">
-                        <div class="inner">
-                            <i class="fa-brands fa-css3"></i>
-                            <div id="numberCSS"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="CSS" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>CSS</p>
+                <div class="phone">
+                    <h4>Zadzwoń do nas</h4>
                 </div>
-                <div class="skill" data-aos="fade-left">
-                    <div class="outer">
-                        <div class="inner">
-                            <i class="fa-brands fa-js"></i>
-                            <div id="numberJS"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="JS" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>JavaScript</p>
-                </div>
-                <div class="skill" data-aos="fade-left">
-                    <div class="outer">
-                        <div class="inner">
-                            <i class="fa-brands fa-bootstrap"></i>
-                            <div id="numberBootstrap"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="Bootstrap" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>Bootstrap</p>
-                </div>
-                <div class="skill" data-aos="fade-right">
-                    <div class="outer">
-                        <div class="inner">
-                            <i class="fa-brands fa-php"></i>
-                            <div id="numberPHP"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="PHP" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>PHP</p>
-                </div>
-                <div class="skill" data-aos="fade-right">
-                    <div class="outer">
-                        <div class="inner">
-                            <i style="font-size: 2rem; font-weight: 600;" >MySQL</i>
-                            <div id="numberMYSQL"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="MYSQL" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>MySQL</p>
-                </div>
-                <div class="skill" data-aos="fade-right">
-                    <div class="outer">
-                        <div class="inner">
-                            <i class="fa-brands fa-wordpress"></i>
-                            <div id="numberWordpress"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="Wordpress" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>WordPress</p>
-                </div>
-                <div class="skill" data-aos="fade-right">
-                    <div class="outer">
-                        <div class="inner">
-                            <i class="fa-brands fa-joomla"></i>
-                            <div id="numberJoomla"></div>
-                        </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220px" height="220px">
-                        <defs>
-                           <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#378f95" />
-                              <stop offset="100%" stop-color="#fff" />
-                           </linearGradient>
-                        </defs>
-                        <circle class="Joomla" cx="110" cy="110" r="100" stroke-linecap="round" />
-                    </svg>
-                    <p>Joomla!</p>
+                <div class="live">
+                    <h4>Odwiedź nas</h4>
                 </div>
             </div>
         </div>
 
-
-        <div class="projects-container" id="section2">
-            <h4 data-aos="zoom-in-up">Projekty<i class="fa-solid fa-list-check"></i></h4>
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, non molestias temporibus fugit voluptates harum libero tenetur cupiditate praesentium, quibusdam ipsam necessitatibus expedita est vero iusto esse minima assumenda voluptas.</p>
-            <div class="project-buttons" data-aos="fade-up">
-                <button id="leftButton" >Paczka 1 - Strony WWW</button>
-                <button id="middleButton">Paczka 2 - JS</button>
-                <button id="rightButton">Paczka 3 - Frameworki (brak)</button>
+    </section>
+    <!-- Stopka Start-->
+    <footer>
+        <div class="info">
+            <div class="about">
+                <h5><i class="fa-solid fa-circle-info"></i></i>O nas</h5>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt amet mollitia voluptatum, libero harum. 
+                    Maiores sit sint deleniti, quaerat deserunt voluptatem unde ab reiciendis ut facere sunt similique provident?</h6>
             </div>
-            <div class="projects-all" id="set1">
-                <div class="project" data-aos="fade-left">
-                    <div class="imgBox">
-                        <img src="img/Projekt1.png" alt="projekt1">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 1 - Drukarnia<br><span>HTML, CSS, PHP</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-left">
-                    <div class="imgBox">
-                        <img src="img/Projekt2.png" alt="projekt2">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 2 - Konfigurator PC<br><span>HTML, CSS</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-left">
-                    <div class="imgBox">
-                        <img src="img/Projekt3.png" alt="projekt3">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 3 - Drukarnia<br><span>HTML, CSS + SASS, JQuery</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt4.png" alt="projekt4">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 4 - Strona o kulturystach<br><span>Bootstrap</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt5.png"  alt="projekt5">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 5 - Strona meblowa<br><span>HTML, SASS</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt11.png" alt="projekt5">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 6 - Pierwsze portfolio<br><span>HTML, SASS, JS, JQuery</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="projects-all" id="set2">
-                <div class="project" data-aos="fade-left">
-                    <div class="imgBox">
-                        <img src="img/projekt6.png" alt="projekt1">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 1 - Notatnik<br><span>Głównie JS</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-left">
-                    <div class="imgBox">
-                        <img src="img/projekt7.png" alt="projekt2">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 2 - Kalkulator pomocniczy na siłownie<br><span>Głównie JS</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-left">
-                    <div class="imgBox">
-                        <img src="img/Projekt8.png" alt="projekt3">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 3 - Kalkulator prosty<br><span>Głównie JS</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt9.png" alt="projekt4">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 4 - Kamień, Papier, Nożyce<br><span>Głównie JS</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt10.png" alt="projekt5">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 5 - Kreator Hasła<br><span>Głównie JS</span></h2>
-                    </div>
-                </div>
+            <div class="contact">
+                <h5><i class="fa-solid fa-mobile-screen-button"></i>Kontakt</h5>
+                <h6><i class="fa-solid fa-location-dot"></i>ul. Cicha 2<br>35-317, Rzeszów</h6>
+                <h6><i class="fa-solid fa-envelope"></i>kontakt@gmail.com</h6>
+                <h6><i class="fa-solid fa-mobile-screen-button"></i>+48 333 222 111</h6>
                 
             </div>
-            <div class="projects-all" id="set3">
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt1.png" alt="projekt1">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 1 - HTML, CSS, PHP<br><span>Crative</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt2.png" alt="projekt2">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 2 - HTML, CSS, PHP<br><span>Crative</span></h2>
-                    </div>
-                </div>
-                <div class="project" data-aos="fade-right">
-                    <div class="imgBox">
-                        <img src="img/Projekt3.png" alt="projekt3">
-                    </div>
-                    <div class="content">
-                        <h2>Projekt 3 - HTML, CSS + SASS, JQuery <br><span>Crative</span></h2>
-                    </div>
-                </div>
+            <div class="open">
+                <h5><i class="fa-solid fa-clock"></i>Godziny otwarcia</h5>
+                <h6>Pon. – Pt. 10:00 – 21:00</h6>
+                <h6>Sobota 10:00 – 21:00</h6>
+                <h6>Niedziela 10:00 – 20:00</h6>
+            </div>
+            <div class="links">
+                <h5><i class="fa-solid fa-paperclip"></i>Przydatne linki</h5>
+                <h6><a href="#">O nas</a></h6>
+                <h6><a href="#">Oferta</a></h6>
+                <h6><a href="#">Cennik</a></h6>
+                <h6><a href="#">Kontakt</a></h6>
+                <h6><a href="#">Polityka prywatności</a></h6>
             </div>
         </div>
-
-
-        <div class="contact-container" id="section3">
-            <div class="square" style="--i:0"></div>
-            <div class="square" style="--i:1"></div>
-            <div class="square" style="--i:2"></div>
-            <div class="square" style="--i:3"></div>
-            <div class="square" style="--i:4"></div>
-            <div class="square" style="--i:5"></div>
-            <div class="square" style="--i:6"></div>
-            <div class="contact-info">
-                <h4 data-aos="zoom-in-up">Dane</h4>
-                <h5 data-aos="fade-right"><i class="fa-solid fa-envelope"></i>Email:</h5>
-                <p data-aos="fade-right">kamilshaikha1998@gmail.com</p>
-                <h5 data-aos="fade-right"><i class="fa-solid fa-envelope"></i>Telefon:</h5>
-                <p data-aos="fade-right">535-366-296</p>
-                <div class="socials" data-aos="fade-right">
-                    <a href="#"><i class="fa-brands fa-facebook-square" style="--i:1"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin" style="--i:2"></i></a>  
-                    <a href="#"><i class="fa-brands fa-github-square" style="--i:3"></i></a>
-                </div>
+        <div class="newsletter">
+            <div class="info-news">
+                <h5>Newsletter</h5>
+                <h6>Zapisz się do newsletter'a, aby otrzymać od nas wiadomości o promocjach.</h6>
             </div>
-            <hr>
-            <div class="form">
-                <h4 data-aos="zoom-in-up">Formularz kontaktowy</h4>
-                <form action="">
-                    <div class="inputBox">
-                        <input type="text" name="Imię" placeholder="Imię" id="name">
-                        <input type="text" name="Nazwisko" placeholder="Nazwisko" id="lastname">
-                    </div>
-                    <div class="inputBox">
-                        <input type="email" name="Email" placeholder="Email">
-                    </div>
-                    <div class="inputBox">
-                        <textarea cols="30" rows="10" placeholder="Wiadomość..."></textarea>
-                    </div>
-                    <div class="inputBox" data-aos="fade-left">
-                        <input type="submit" value="Wyślij">
-                    </div>
-                </form>
-            </div>
+            <h5><i class="fa-solid fa-paper-plane"></i><input type="email" name="" id=""><button>Subskrybuj</button></h5>
         </div>
-
-        <footer>
-            <div class="link-footer" data-aos="zoom-in-up">
-                <a href="#">Umiejętności</a>
-                <a href="#">Projekty</a>
-                <a href="#">Kontakt</a>
-            </div>
-            <div class="socials-footer" data-aos="zoom-in-up">
-                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>  
-                <a href="#"><i class="fa-brands fa-github-square"></i></a>
-            </div>
-            <hr>
-            <div class="copyright">
-                <h6>Portfolio - Kamil Shaikha &copy;2022 / Wszelkie prawa zastrzeżone</h6>
-            </div>
-        </footer>
-    </div>
-    
-
-
-
-    <div class='spinner-wrapper'>
-        <div class="spinner"></div>
-        <div class="spinner-smaller"></div>
-        <h1>K.S.</h1>
-        <div class="box">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <div class="socials">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-google-plus-square"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+            <a href=""><i class="fab fa-pinterest-square"></i></a>
+            <a href=""><i class="fab fa-youtube-square"></i></a>
+         </div>
+        <hr>
+        <div class="copyright">
+            <p>&copy;2022 NAZWA | Medycyna estetyczna. Realizacja: <a href="#">Kamil Shaikha</a></p>
         </div>
-    </div>
-    <a href="#" class="scrollup"><i class="fa-solid fa-angles-up"></i></a>
+    </footer>
+    <!-- Stopka Stop-->
+
+
     <div id="progressbar"></div>
-    <div id="scrollPath"></div>
 
-    <script src="spinner.js"></script>
-    <script src="circle.js"></script>
+
     <script src="scrollbar.js"></script>
-    <script src="scrollToTop.js"></script>
-    <script src="projects.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-    <script>
-        jQuery(function($)
-            {
-                $.scrollTo(0);
-        
-                $('.scrollup').click(function() { $.scrollTo($('body'), 500); });
-            }
-            );
-            
-                $(window).scroll(function()
-            {
-                if($(this).scrollTop()>200) $('.scrollup').fadeIn();
-                else $('.scrollup').fadeOut();		
-            }
-            );
-    </script>
-    </body>
+</body>
 </html>
