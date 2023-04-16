@@ -21,7 +21,7 @@ body
     overflow: hidden
 
 .container
-    background: linear-gradient(225deg, $black-color 25%, rgba(55, 143, 149, 0.6) 90%), url("img/bg.jpg") no-repeat center center / cover
+    background: linear-gradient(225deg, $black-color 25%, rgba(55, 143, 149, 0.6) 90%), url("img/bg.webp") no-repeat center center / cover
     header
         width: 100%
         height: 100vh
@@ -232,7 +232,7 @@ body
         margin: auto
         border-radius: 10vh
         background: $black-color
-        h4
+        h3
             color: $secondary-color
             font-size: 5rem
             padding: 50px
@@ -350,6 +350,7 @@ body
     .projects-container
         background: $black-color
         margin-top: 75px
+
         h4
             color: $secondary-color
             font-size: 5rem
@@ -400,11 +401,11 @@ body
             grid-template-columns: repeat(3, 1fr)
             margin: 30px auto 0 auto
             padding-bottom: 30px
-            width: 80vw
+            width: 50vw
             .project
                 position: relative
-                width: 25vw
-                height: 320px
+                width: 50vw
+                min-height: 520px
                 display: flex
                 margin-bottom: 20px
                 transition: 0.5s
@@ -415,17 +416,13 @@ body
                     position: absolute
                     top: 0
                     left: 0
-                    width: 100%
-                    height: 300px
                     padding: 10px
                     box-sizing: border-box
                     z-index: 1
                     img
-                        max-width: 100%
                         opacity: 0.3
                         transition: 0.5s
-                        width: 30vw
-                        height: 300px
+
                 .content
                     position: absolute
                     bottom: 0
@@ -473,7 +470,7 @@ body
                     filter: blur(8px)
                     z-index: 0
             .project:hover
-                height: 400px
+                height: 520px
                 .imgBox
                     img
                         opacity: 1
@@ -493,7 +490,7 @@ body
         @include blur
         border-radius: 20px
         margin: 150px auto 150px auto
-        h4
+        h3
             position: relative
             color: $secondary-color
             font-weight: 600
@@ -512,7 +509,7 @@ body
                 font-size: 2.5rem
                 color: $secondary-color
                 font-family: 'Orbitron', cursive
-            h5
+            h4
                 font-size: 3rem
                 color: $secondary-color
                 font-family: 'Orbitron', cursive
@@ -702,7 +699,7 @@ body
             margin: 0 auto
             margin-bottom: 10px
         .copyright
-            h6
+            h4
                 text-align: center
                 font-size: 2rem
                 color: $secondary-color
@@ -802,31 +799,31 @@ body
                         bottom: 100vh
             li:nth-child(2) 
                 left: 15vw
-                animation-delay: 2s
+                animation-delay: 1.5s
             li:nth-child(3) 
                 left: 25vw
-                animation-delay: 3s
+                animation-delay: 2s
             li:nth-child(4) 
                 left: 35vw
-                animation-delay: 1.3s
+                animation-delay: 1.2s
             li:nth-child(5) 
                 left: 45vw
-                animation-delay: 3.3s
+                animation-delay: 2.2s
             li:nth-child(6) 
                 left: 55vw
-                animation-delay: 1.5s
+                animation-delay: 1.3s
             li:nth-child(7) 
                 left: 65vw
-                animation-delay: 2.5s
+                animation-delay: 1.7s
             li:nth-child(8) 
                 left: 75vw
                 animation-delay: 1s
             li:nth-child(9) 
                 left: 85vw
-                animation-delay: 3.2s
+                animation-delay: 2.5s
             li:nth-child(10) 
                 left: 95vw
-                animation-delay: 3.8s
+                animation-delay: 2.6s
 
                     
         
@@ -897,6 +894,9 @@ body
         transform: translate(-50%, -50%)
     &:hover
         transform: translateY(-5px)
+        border-color: $primary-color
+        i
+            color: $primary-color
 
 section#sideSocials
     position: fixed
@@ -935,12 +935,12 @@ section#sideSocials
           top: 15px
           left: 60px
           font-size: 3rem
-        i.fa-instagram
+        i.fa-linkedin-in
           position: absolute
           top: 75px
           left: 58px
           font-size: 3rem
-        i.fa-youtube
+        i.fa-github
           position: absolute
           top: 135px
           left: 55px
