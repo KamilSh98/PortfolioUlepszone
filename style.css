@@ -150,12 +150,14 @@ body {
 }
 
 .container header .sticky {
-  width: 100%;
   position: fixed;
   left: 0;
   top: 0;
+  width: 100vw;
   z-index: 100;
+  padding: 0 2.5% 0 2.5%;
   background: #222426;
+  border-bottom: 1px solid #fff;
 }
 
 .container header .main-header {
