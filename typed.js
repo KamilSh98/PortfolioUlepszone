@@ -1,5 +1,5 @@
 var typed = new Typed(".animatedText",{
-    strings: ["Nazywam się Kamil Shaikha","Pragnę zostać front-end developerem"],
+    strings: ["Front-end Developerem.","Web Developerem."],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
