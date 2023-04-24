@@ -30,7 +30,7 @@ let numberJS = document.getElementById("numberJS");
 let counterJS = 0;
         
         setInterval(() => {
-            if(counterJS == 50){
+            if(counterJS == 35){
                 clearInterval();
             }
             else{
@@ -85,7 +85,7 @@ let numberWordpress = document.getElementById("numberWordpress");
 let counterWordpress = 0;
         
         setInterval(() => {
-            if(counterWordpress == 35){
+            if(counterWordpress == 75){
                 clearInterval();
             }
             else{
@@ -104,5 +104,32 @@ let counterJoomla = 0;
             else{
                 counterJoomla += 1;
                 numberJoomla.innerHTML = counterJoomla + "%";
+            }
+        }, 20)
+
+let numberExcel = document.getElementById("numberExcel");
+let counterExcel = 0;
+        
+        setInterval(() => {
+            if(counterExcel == 30){
+                clearInterval();
+            }
+            else{
+                counterExcel += 1;
+                numberExcel.innerHTML = counterExcel + "%";
+            }
+        }, 20)
+
+
+let numberPowerBI = document.getElementById("numberPowerBI");
+let counterPowerBI = 0;
+        
+        setInterval(() => {
+            if(counterPowerBI == 30){
+                clearInterval();
+            }
+            else{
+                counterPowerBI += 1;
+                numberPowerBI.innerHTML = counterPowerBI + "%";
             }
         }, 20)
