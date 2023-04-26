@@ -111,7 +111,7 @@ let numberExcel = document.getElementById("numberExcel");
 let counterExcel = 0;
         
         setInterval(() => {
-            if(counterExcel == 30){
+            if(counterExcel == 90){
                 clearInterval();
             }
             else{
@@ -125,7 +125,7 @@ let numberPowerBI = document.getElementById("numberPowerBI");
 let counterPowerBI = 0;
         
         setInterval(() => {
-            if(counterPowerBI == 30){
+            if(counterPowerBI == 35){
                 clearInterval();
             }
             else{

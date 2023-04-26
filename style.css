@@ -817,7 +817,7 @@ body {
           box-shadow: inset 4px 4px 6px -1px #378f95, inset -4px -4px 6px -1px #378f95, -0.5px -0.5px 0px #378f95;
 }
 
-.container .skills-container .all-skills .skill .outer .inner #numberHTML, .container .skills-container .all-skills .skill .outer .inner #numberCSS, .container .skills-container .all-skills .skill .outer .inner #numberJS, .container .skills-container .all-skills .skill .outer .inner #numberBootstrap, .container .skills-container .all-skills .skill .outer .inner #numberPHP, .container .skills-container .all-skills .skill .outer .inner #numberMYSQL, .container .skills-container .all-skills .skill .outer .inner #numberWordpress, .container .skills-container .all-skills .skill .outer .inner #numberJoomla {
+.container .skills-container .all-skills .skill .outer .inner #numberHTML, .container .skills-container .all-skills .skill .outer .inner #numberCSS, .container .skills-container .all-skills .skill .outer .inner #numberJS, .container .skills-container .all-skills .skill .outer .inner #numberBootstrap, .container .skills-container .all-skills .skill .outer .inner #numberPHP, .container .skills-container .all-skills .skill .outer .inner #numberMYSQL, .container .skills-container .all-skills .skill .outer .inner #numberWordpress, .container .skills-container .all-skills .skill .outer .inner #numberJoomla, .container .skills-container .all-skills .skill .outer .inner #numberExcel, .container .skills-container .all-skills .skill .outer .inner #numberPowerBI {
   font-weight: 600;
   color: #378f95;
   font-size: 3rem;
@@ -1016,6 +1016,50 @@ body {
 @keyframes animationCircleJoomla {
   100% {
     stroke-dashoffset: 437.5;
+  }
+}
+
+.container .skills-container .all-skills .skill svg circle.Excel {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 625;
+  stroke-dashoffset: 625;
+  -webkit-animation: animationCircleExcel 2s linear forwards;
+          animation: animationCircleExcel 2s linear forwards;
+}
+
+@-webkit-keyframes animationCircleExcel {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes animationCircleExcel {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.container .skills-container .all-skills .skill svg circle.PowerBI {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 625;
+  stroke-dashoffset: 625;
+  -webkit-animation: animationCirclePowerBI 2s linear forwards;
+          animation: animationCirclePowerBI 2s linear forwards;
+}
+
+@-webkit-keyframes animationCirclePowerBI {
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+
+@keyframes animationCirclePowerBI {
+  100% {
+    stroke-dashoffset: 400;
   }
 }
 
@@ -1413,82 +1457,89 @@ body {
           justify-content: center;
 }
 
-.spinner-wrapper .spinner {
+.spinner-wrapper .loader {
+  width: 20em;
+  height: 20em;
+  font-size: 12px;
   position: relative;
-  height: 250px;
-  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.spinner-wrapper .spinner .blocks {
+.spinner-wrapper .loader .face {
   position: absolute;
-  width: 4px;
-  height: 20px;
-  background: #378f95;
+  border-radius: 50%;
+  border-style: solid;
+  -webkit-animation: animate023845 3s linear infinite;
+          animation: animate023845 3s linear infinite;
+}
+
+@-webkit-keyframes animate023845 {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes animate023845 {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+.spinner-wrapper .loader .face .circle {
+  position: absolute;
+  width: 50%;
+  height: 0.1em;
+  top: 50%;
   left: 50%;
-  -webkit-transform: rotate(calc(18deg*var(--i)));
-          transform: rotate(calc(18deg*var(--i)));
-  -webkit-transform-origin: 0 125px;
-          transform-origin: 0 125px;
-  -webkit-animation: spinner 2s ease-in-out infinite;
-          animation: spinner 2s ease-in-out infinite;
-  -webkit-animation-delay: calc(.05s * var(--i));
-          animation-delay: calc(.05s * var(--i));
+  background-color: transparent;
+  -webkit-transform: rotate(var(--deg));
+          transform: rotate(var(--deg));
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
-@-webkit-keyframes spinner {
-  0% {
-    background: #222426;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  25% {
-    background: #378f95;
-    -webkit-box-shadow: 0 0 15px #378f95;
-            box-shadow: 0 0 15px #378f95;
-  }
-  50% {
-    background: #222426;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  75% {
-    background: #378f95;
-    -webkit-box-shadow: 0 0 15px #378f95;
-            box-shadow: 0 0 15px #378f95;
-  }
-  100% {
-    background: #222426;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
+.spinner-wrapper .loader .face .circle::before {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  content: '';
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2em;
+          box-shadow: 0 0 2em;
 }
 
-@keyframes spinner {
-  0% {
-    background: #222426;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  25% {
-    background: #378f95;
-    -webkit-box-shadow: 0 0 15px #378f95;
-            box-shadow: 0 0 15px #378f95;
-  }
-  50% {
-    background: #222426;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  75% {
-    background: #378f95;
-    -webkit-box-shadow: 0 0 15px #378f95;
-            box-shadow: 0 0 15px #378f95;
-  }
-  100% {
-    background: #222426;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
+.spinner-wrapper .loader .face:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-color: #378f95 transparent transparent #378f95;
+  border-width: 0.2em 0.2em 0em 0em;
+  --deg: -45deg;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.spinner-wrapper .loader .face:nth-child(2) {
+  width: 80%;
+  height: 80%;
+  color: #378f95;
+  border-color: #fff #fff transparent transparent;
+  border-width: 0.2em 0em 0em 0.2em;
+  --deg: -135deg;
+  animation-direction: reverse;
 }
 
 .spinner-wrapper h1 {
