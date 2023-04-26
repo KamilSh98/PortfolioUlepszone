@@ -124,7 +124,7 @@ body
         .main-header
             display: flex
             width: 90vw
-            height: 80%
+            height: 80vh
             .header-left
                 width: 68%
                 margin: auto
@@ -154,38 +154,63 @@ body
                 .header-box
                     display: flex
                     .buttonAwesome
-                        position: relative
-                        display: inline-block
-                        font-size: 2.5rem
+                        font-size: 2.3rem
                         color: $black-color
                         font-weight: 800
                         font-family: 'Roboto', sans-serif
                         text-align: center
-                        padding: 30px
-                        margin: 30px
+                        padding: 25px
+                        margin: 25px
                         background: $secondary-color
                         border: 2px solid $black-color
                         overflow: hidden
+                        min-width: 280px
                         i
-                            margin-left: 5px
-                        span
+                            margin-left: 15px
+                    .downloadButton
+                        osition: relative
+                        padding: 25px
+                        margin: 25px
+                        font-size: 2.3rem
+                        cursor: pointer
+                        display: flex
+                        border: 2px solid $secondary-color
+                        background-color: $primary-color
+                        font-weight: 800
+                        font-family: 'Roboto', sans-serif
+                        text-align: center
+                        min-width: 280px
+                        .buttonText, .fa-download
+                            transition: all 0.3s
+                        .buttonText
+                            color: #fff
+                            font-weight: 600
+                            text-decoration: none
+                            border: none
+                        .fa-download
                             position: absolute
-                            background: #fff
-                            transform: translate(-50%, -50%)
-                            pointer-events: none
-                            border-radius: 50%
-                            animation: button 1s linear infinite
+                            font-size: 3rem
+                            background-color: transparent
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            fill: $primary-color
+                            color: $secondary-color
+                            overflow: hidden
+                            transform: translateX(190px)
+                    .downloadButton:hover
+                        background: linear-gradient(135deg, rgba(55,143,149,1) 15%, rgba(255,255,255,1) 50%, rgba(55,143,149,1) 85%)
+                        border: 2px solid $primary-color
+                        .buttonText
+                            color: transparent
+                        .fa-download
+                            transform: translateX(90px)
+                            color: $primary-color
+                            background-color: transparent
+                            font-size: 3.5rem
+                    .downloadButton:active 
+                        border: 1px solid $primary-color
 
-                            @keyframes button 
-                                0%
-                                    width: 0
-                                    height: 0
-                                    opacity: 0.3
-                                100%
-                                    width: 500px
-                                    height: 500px
-                                    opacity: 0.3
-                            
 
                             
             .header-right
@@ -247,7 +272,7 @@ body
 
     .about-container
         width: 90vw
-        height: 100vh
+        min-height: 100vh
         margin: auto
         margin-bottom: 150px
         display: flex
@@ -336,7 +361,7 @@ body
     .projects-container
         background: $black-color
         margin-top: 75px
-        height: 100vh
+        min-height: 100vh
         h4
             color: $secondary-color
             font-size: 5rem
@@ -385,15 +410,13 @@ body
                 font-size: 4rem
                 text-align: center
         .projects-all
-            display: grid
-            grid-template-columns: repeat(3, 1fr)
             margin: 30px auto 0 auto
             padding-bottom: 30px
-            width: 50vw
+            max-width: 50vw
             .project
                 position: relative
                 width: 50vw
-                min-height: 520px
+                height: 50vh
                 display: flex
                 margin-bottom: 20px
                 transition: 0.5s
@@ -460,7 +483,7 @@ body
                     filter: blur(8px)
                     z-index: 0
             .project:hover
-                height: 520px
+                max-height: 520px
                 border: .2px solid $secondary-color
                 .imgBox
                     img
@@ -470,9 +493,8 @@ body
 
     .skills-container
         width: 90vw
-        height: 100vh
+        min-height: 100vh
         margin: auto
-        margin: 100px
         border-radius: 10vh
         background: $black-color
         h3
@@ -1139,6 +1161,16 @@ section#sideSocials
                     left: -10%
                 #click:checked ~ .menu-btn i:before
                     content: "\f00d"
+        .skills-container
+                .all-skills
+                    grid-template-columns: repeat(4, 1fr)
+                    justify-content: center
+                    align-content: center
+                    .skill:nth-child(9)
+                        grid-column-end: -3
+                        margin-bottom: 100px
+    section#sideSocials
+        display: none
 
   
 
@@ -1153,12 +1185,15 @@ section#sideSocials
                     display: none
         .projects-container
             .projects-all
-                grid-template-columns: repeat(2, 1fr)
+                max-width: 100vw
                 .project
-                    width: 35vw
-                    .imgBox
-                        img
-                            width: 35vw
+                    width: 70vw
+                    margin: 0 auto
+        .about-container
+            .about-left
+                display: none
+            .about-right
+                width: 100%
 
 
 
@@ -1192,11 +1227,21 @@ section#sideSocials
                     margin-left: 1%
             .square
                 display: none
-
         .skills-container
             .all-skills
                 grid-template-columns: repeat(3, 1fr)
-
+                .skill:nth-child(9)
+                    grid-column-end: -1
+                    margin-bottom: 0
+                .skill:nth-child(10)
+                    grid-column-end: -2
+                    margin-bottom: 80px
+        .projects-container
+            .projects-all
+                .project
+                    height: 45vh
+                    margin-bottom: 0
+                    
 
 
 @media (max-width: 1000px)
@@ -1215,9 +1260,18 @@ section#sideSocials
                 button#rightButton
                     border-top-right-radius: 0
                     border-bottom-right-radius: 0
+            .projects-all
+                .project
+                    height: 35vh
         .skills-container
             .all-skills
                 grid-template-columns: repeat(2, 1fr)
+                .skill:nth-child(9)
+                    grid-column-end: -2
+                    margin-bottom: 0
+                .skill:nth-child(10)
+                    grid-column-end: -1
+                    margin-bottom: 80px
         
 
 
@@ -1226,13 +1280,9 @@ section#sideSocials
     .container
         .projects-container
             .projects-all
-                grid-template-columns: repeat(1, 1fr)
+                padding: 0
                 .project
-                    width: 80vw
-                    margin: 0 auto 30px auto
-                    .imgBox
-                        img
-                            width: 80vw
+                    height: 30vh
         footer
             .link-footer
                 a
@@ -1244,6 +1294,13 @@ section#sideSocials
                     font-size: 2.2rem
                 h5
                     font-size: 2.2rem
+        .about-container
+            .about-right
+                .about-categories
+                    display: block
+                    a
+                        p
+                            text-align: center
     .scrollup
         display: none
         right: -100px
@@ -1260,7 +1317,18 @@ section#sideSocials
                         a
                             font-size: 1.5rem
                             width: 100%
-
+        .projects-container
+            .projects-all
+                padding: 0
+                .project
+                    height: 25vh
+        .skills-container
+            .all-skills
+                display: block
+                .skill
+                    margin: 110px auto
+                .skill:first-child
+                    margin-top: 0
         .contact-container
             margin: 50px auto 0px auto
             .contact-info
@@ -1270,10 +1338,7 @@ section#sideSocials
                     font-size: 1.8rem
             h4
                 font-size: 3rem
-        .skills-container
-            .all-skills
-                grid-template-columns: repeat(1, 1fr)
-    
+                
         footer
             .link-footer
                 a

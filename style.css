@@ -164,7 +164,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 90vw;
-  height: 80%;
+  height: 80vh;
 }
 
 .container header .main-header .header-left {
@@ -209,59 +209,91 @@ body {
 }
 
 .container header .main-header .header-left .header-box .buttonAwesome {
-  position: relative;
-  display: inline-block;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #222426;
   font-weight: 800;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  padding: 30px;
-  margin: 30px;
+  padding: 25px;
+  margin: 25px;
   background: #fff;
   border: 2px solid #222426;
   overflow: hidden;
+  min-width: 280px;
 }
 
 .container header .main-header .header-left .header-box .buttonAwesome i {
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
-.container header .main-header .header-left .header-box .buttonAwesome span {
+.container header .main-header .header-left .header-box .downloadButton {
+  osition: relative;
+  padding: 25px;
+  margin: 25px;
+  font-size: 2.3rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #fff;
+  background-color: #378f95;
+  font-weight: 800;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  min-width: 280px;
+}
+
+.container header .main-header .header-left .header-box .downloadButton .buttonText, .container header .main-header .header-left .header-box .downloadButton .fa-download {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.container header .main-header .header-left .header-box .downloadButton .buttonText {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+}
+
+.container header .main-header .header-left .header-box .downloadButton .fa-download {
   position: absolute;
-  background: #fff;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  pointer-events: none;
-  border-radius: 50%;
-  -webkit-animation: button 1s linear infinite;
-          animation: button 1s linear infinite;
+  font-size: 3rem;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  fill: #378f95;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transform: translateX(190px);
+          transform: translateX(190px);
 }
 
-@-webkit-keyframes button {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.3;
-  }
-  100% {
-    width: 500px;
-    height: 500px;
-    opacity: 0.3;
-  }
+.container header .main-header .header-left .header-box .downloadButton:hover {
+  background: linear-gradient(135deg, #378f95 15%, white 50%, #378f95 85%);
+  border: 2px solid #378f95;
 }
 
-@keyframes button {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.3;
-  }
-  100% {
-    width: 500px;
-    height: 500px;
-    opacity: 0.3;
-  }
+.container header .main-header .header-left .header-box .downloadButton:hover .buttonText {
+  color: transparent;
+}
+
+.container header .main-header .header-left .header-box .downloadButton:hover .fa-download {
+  -webkit-transform: translateX(90px);
+          transform: translateX(90px);
+  color: #378f95;
+  background-color: transparent;
+  font-size: 3.5rem;
+}
+
+.container header .main-header .header-left .header-box .downloadButton:active {
+  border: 1px solid #378f95;
 }
 
 .container header .main-header .header-right {
@@ -385,7 +417,7 @@ body {
 
 .container .about-container {
   width: 90vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
   margin-bottom: 150px;
   display: -webkit-box;
@@ -546,7 +578,7 @@ body {
 .container .projects-container {
   background: #222426;
   margin-top: 75px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container .projects-container h4 {
@@ -624,19 +656,15 @@ body {
 }
 
 .container .projects-container .projects-all {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
   margin: 30px auto 0 auto;
   padding-bottom: 30px;
-  width: 50vw;
+  max-width: 50vw;
 }
 
 .container .projects-container .projects-all .project {
   position: relative;
   width: 50vw;
-  min-height: 520px;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,7 +760,7 @@ body {
 }
 
 .container .projects-container .projects-all .project:hover {
-  height: 520px;
+  max-height: 520px;
   border: 0.2px solid #fff;
 }
 
@@ -746,9 +774,8 @@ body {
 
 .container .skills-container {
   width: 90vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
-  margin: 100px;
   border-radius: 10vh;
   background: #222426;
 }
@@ -1894,6 +1921,22 @@ section#sideSocials a:hover {
   .container header nav #click:checked ~ .menu-btn i:before {
     content: "\f00d";
   }
+  .container .skills-container .all-skills {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .container .skills-container .all-skills .skill:nth-child(9) {
+    grid-column-end: -3;
+    margin-bottom: 100px;
+  }
+  section#sideSocials {
+    display: none;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -1904,14 +1947,17 @@ section#sideSocials a:hover {
     display: none;
   }
   .container .projects-container .projects-all {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    max-width: 100vw;
   }
   .container .projects-container .projects-all .project {
-    width: 35vw;
+    width: 70vw;
+    margin: 0 auto;
   }
-  .container .projects-container .projects-all .project .imgBox img {
-    width: 35vw;
+  .container .about-container .about-left {
+    display: none;
+  }
+  .container .about-container .about-right {
+    width: 100%;
   }
 }
 
@@ -1964,6 +2010,18 @@ section#sideSocials a:hover {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+  .container .skills-container .all-skills .skill:nth-child(9) {
+    grid-column-end: -1;
+    margin-bottom: 0;
+  }
+  .container .skills-container .all-skills .skill:nth-child(10) {
+    grid-column-end: -2;
+    margin-bottom: 80px;
+  }
+  .container .projects-container .projects-all .project {
+    height: 45vh;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1985,23 +2043,29 @@ section#sideSocials a:hover {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
+  .container .projects-container .projects-all .project {
+    height: 35vh;
+  }
   .container .skills-container .all-skills {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  .container .skills-container .all-skills .skill:nth-child(9) {
+    grid-column-end: -2;
+    margin-bottom: 0;
+  }
+  .container .skills-container .all-skills .skill:nth-child(10) {
+    grid-column-end: -1;
+    margin-bottom: 80px;
   }
 }
 
 @media (max-width: 800px) {
   .container .projects-container .projects-all {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    padding: 0;
   }
   .container .projects-container .projects-all .project {
-    width: 80vw;
-    margin: 0 auto 30px auto;
-  }
-  .container .projects-container .projects-all .project .imgBox img {
-    width: 80vw;
+    height: 30vh;
   }
   .container footer .link-footer a {
     font-size: 2.5rem;
@@ -2014,6 +2078,12 @@ section#sideSocials a:hover {
   }
   .container .contact-container .contact-info h5 {
     font-size: 2.2rem;
+  }
+  .container .about-container .about-right .about-categories {
+    display: block;
+  }
+  .container .about-container .about-right .about-categories a p {
+    text-align: center;
   }
   .scrollup {
     display: none;
@@ -2030,6 +2100,21 @@ section#sideSocials a:hover {
     font-size: 1.5rem;
     width: 100%;
   }
+  .container .projects-container .projects-all {
+    padding: 0;
+  }
+  .container .projects-container .projects-all .project {
+    height: 25vh;
+  }
+  .container .skills-container .all-skills {
+    display: block;
+  }
+  .container .skills-container .all-skills .skill {
+    margin: 110px auto;
+  }
+  .container .skills-container .all-skills .skill:first-child {
+    margin-top: 0;
+  }
   .container .contact-container {
     margin: 50px auto 0px auto;
   }
@@ -2041,10 +2126,6 @@ section#sideSocials a:hover {
   }
   .container .contact-container h4 {
     font-size: 3rem;
-  }
-  .container .skills-container .all-skills {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
   }
   .container footer .link-footer a {
     font-size: 2rem;
