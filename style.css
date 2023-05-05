@@ -423,7 +423,6 @@ body {
   width: 90vw;
   min-height: 100vh;
   margin: auto;
-  margin-bottom: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,6 +665,129 @@ body {
 
 .container .about-container .about-right #thesis-more {
   display: none;
+}
+
+.container .education-container {
+  margin-bottom: 100px;
+}
+
+.container .education-container .education-top-text {
+  color: #fff;
+  font-size: 5rem;
+  padding: 30px;
+  text-align: center;
+}
+
+.container .education-container .education-top-text i {
+  margin-left: 15px;
+}
+
+.container .education-container .education-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .education-container .education-all .education-left {
+  width: calc((100%/10)*4.5);
+  text-align: right;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  text-align: left;
+}
+
+.container .education-container .education-all .education-year {
+  color: #fff;
+  font-weight: 800;
+  margin-left: 10px;
+  font-size: 2rem;
+}
+
+.container .education-container .education-all .education-place p {
+  color: #fff;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.container .education-container .education-all .education-place .more-all ul li {
+  font-size: 2rem;
+  color: #378f95;
+}
+
+.container .education-container .education-all .education-place #more-left {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.container .education-container .education-all .education-middle {
+  position: relative;
+  width: calc((100%/10));
+}
+
+.container .education-container .education-all .dot1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 2;
+}
+
+.container .education-container .education-all .dot2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 145px;
+  left: 50%;
+  z-index: 2;
+}
+
+.container .education-container .education-all .line {
+  width: 1px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 30px;
+  left: 55%;
+  z-index: 1;
+}
+
+.container .education-container .education-all .education-right {
+  width: calc((100%/10)*4.5);
+  margin-top: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .education-container .education-all .education-year {
+  color: #fff;
+  margin-right: 10px;
+  font-weight: 800;
+}
+
+.container .education-container .education-all .education-place p {
+  color: #fff;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.container .education-container .education-all .education-place #more-right {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .container .projects-container {
@@ -939,10 +1061,10 @@ body {
 
 .container .skills-container .all-skills .skill p {
   font-size: 3.5rem;
-  padding: 10px;
   font-family: 'Orbitron', cursive;
   color: #378f95;
   text-align: center;
+  padding-top: 10px;
 }
 
 .container .skills-container .all-skills .skill svg {
@@ -1442,11 +1564,10 @@ body {
 
 .container footer {
   position: relative;
-  height: 400px;
   min-height: 350px;
   width: 100%;
   background: #222426;
-  margin-top: 200px;
+  margin-top: 250px;
   padding: 20px 40px;
 }
 
@@ -2109,6 +2230,9 @@ section#sideSocials a:hover {
     grid-column-end: -3;
     margin-bottom: 100px;
   }
+  .container .education-container {
+    display: none;
+  }
 }
 
 @media (max-width: 1530px) {
@@ -2359,6 +2483,9 @@ section#sideSocials a:hover {
     display: none;
     right: -100px;
     bottom: -50px;
+  }
+  .spinner-wrapper .box {
+    display: none;
   }
 }
 
