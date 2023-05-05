@@ -20,6 +20,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
 
 
 
@@ -48,7 +51,9 @@
             );
         </script>
 </head>
-<body> 
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js"></script>
     <div class="container">
         <header>
             <nav id="sec">
@@ -168,7 +173,7 @@
             <p data-aos="fade-up">W swojej historii programowania korzystałem z języków takich jak: HTML, CSS + Preprocesor SASS, JavaScript, Bootstrap. Wykonałem także projekt na studiach 
                 z podstaw PHP oraz MySQL. Korzystałem z systemów zarządzania treścią (CMS) takich jak Wordpress oraz Joomla!  </p>
             <div class="all-skills">
-                <div class="skill" data-aos="fade-left">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-html5"></i>
@@ -186,7 +191,7 @@
                     </svg>
                     <p>HTML</p>
                 </div>
-                <div class="skill" data-aos="fade-left">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-css3"></i>
@@ -204,7 +209,7 @@
                     </svg>
                     <p>CSS</p>
                 </div>
-                <div class="skill" data-aos="fade-left">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-js"></i>
@@ -222,7 +227,7 @@
                     </svg>
                     <p>JavaScript</p>
                 </div>
-                <div class="skill" data-aos="fade-left">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-bootstrap"></i>
@@ -240,7 +245,7 @@
                     </svg>
                     <p>Bootstrap</p>
                 </div>
-                <div class="skill" data-aos="fade-left">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-php"></i>
@@ -258,7 +263,7 @@
                     </svg>
                     <p>PHP</p>
                 </div>
-                <div class="skill" data-aos="fade-right">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i style="font-size: 2rem; font-weight: 600;" >MySQL</i>
@@ -276,7 +281,7 @@
                     </svg>
                     <p>MySQL</p>
                 </div>
-                <div class="skill" data-aos="fade-right">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-wordpress"></i>
@@ -294,7 +299,7 @@
                     </svg>
                     <p>WordPress</p>
                 </div>
-                <div class="skill" data-aos="fade-right">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-joomla"></i>
@@ -312,7 +317,7 @@
                     </svg>
                     <p>Joomla!</p>
                 </div>
-                <div class="skill" data-aos="fade-right">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-joomla"></i>
@@ -330,7 +335,7 @@
                     </svg>
                     <p>Microsoft Excel</p>
                 </div>
-                <div class="skill" data-aos="fade-right">
+                <div class="skill" data-aos="fade-up">
                     <div class="outer">
                         <div class="inner">
                             <i class="fa-brands fa-joomla"></i>
@@ -444,7 +449,28 @@
         </footer>
     </div>
     
+    <!--
+    <div class="chat">
+        <div class="chat-title">
+            <h1>Kamil Shaikha</h1>
+            <h2>Bot</h2>
+            <figure class="avatar">
+                <img src="img/portret.jpg">
+            </figure>
+        </div>
 
+        <div class="messages">
+            <div class="messages-content">
+
+            </div>
+        </div>
+
+        <div class="messages-box">
+            <textarea class="message-input" placeholder="Wyślij wiadomość"></textarea>
+            <button type="submit" class="message-submit">Wyślij</button>
+        </div>
+    </div>
+    /-->
 
     <div class='spinner-wrapper slide-progress-bar'>
         <div class="loader">
@@ -488,6 +514,7 @@
     <script src="scrollToTop.js"></script>
     <script src="projects.js"></script>
     <script src="about.js"></script>
+    <script src="chat.js"></script>
     <!-- <script src="sticky.js"></script> --> 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -497,6 +524,11 @@
     <script src="typed.js"></script>
     <script src="scroll.js"></script>
     <script src="buttons.js"></script>
+    <script>
+        AOS.init({
+        duration: 1200,
+        })
+    </script>
     <script>
         jQuery(function($)
             {

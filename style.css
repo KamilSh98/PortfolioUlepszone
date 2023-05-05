@@ -17,6 +17,7 @@ body {
 
 .container {
   background: linear-gradient(225deg, #222426 25%, rgba(55, 143, 149, 0.6) 90%), url("img/bg.webp") no-repeat center center/cover;
+  overflow-x: hidden;
 }
 
 .container header {
@@ -49,6 +50,7 @@ body {
 .container header nav .logo a h1 {
   color: #fff;
   padding: 0px 0 0 40px;
+  margin-top: 0px;
   font-size: 4rem;
   letter-spacing: 4px;
   width: 35vw;
@@ -65,12 +67,12 @@ body {
   font-size: 3rem;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   display: none;
   cursor: pointer;
   z-index: 2001;
   padding: 10px;
-  background: #222426;
+  background: transparent;
 }
 
 .container header nav ul {
@@ -1440,7 +1442,8 @@ body {
 
 .container footer {
   position: relative;
-  min-height: 300px;
+  height: 400px;
+  min-height: 350px;
   width: 100%;
   background: #222426;
   margin-top: 200px;
@@ -1850,6 +1853,133 @@ body {
           filter: blur(10px);
 }
 
+.chat {
+  width: 300px;
+  height: 50vh;
+  z-index: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25);
+  border: 4px solid #222426;
+}
+
+.chat .chat-title {
+  background: #222426;
+  padding: 10px 10px 10px 50px;
+  color: #fff;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45px;
+          flex: 0 1 45px;
+  z-index: 2;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.chat .chat-title h1, .chat .chat-title h2 {
+  font-weight: normal;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.chat .chat-title h2 {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.chat .chat-title .avatar {
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  background: url(img/portret.jpg);
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #fff;
+}
+
+.chat .chat-title .avatar img {
+  width: 100%;
+  height: auto;
+}
+
+.chat .messages {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.chat .messages-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40px;
+          flex: 0 1 40px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  position: relative;
+  border-top: 2px solid #222426;
+}
+
+.chat .messages-box .message-input {
+  background: none;
+  border: none;
+  outline: none !important;
+  resize: none;
+  color: #222426;
+  font-size: 1.4rem;
+  height: 17px;
+  margin: 0;
+  padding-right: 20px;
+  width: 265px;
+}
+
+.chat .messages-box textarea:focus:-webkit-placeholder {
+  color: transparent;
+}
+
+.chat .messages-box .message-submit {
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  right: 10px;
+  border: none;
+  color: #fff;
+  background: #378f95;
+  font-size: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  outline: none !important;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+  border-radius: 4px;
+}
+
+.chat .messages-box .message-submit:hover {
+  background: #489ea6;
+}
+
 .scrollup {
   display: none;
   border: 1px solid #fff;
@@ -2164,6 +2294,10 @@ section#sideSocials a:hover {
   .container header .main-header .header-left .header-box .downloadButton .fa-download {
     display: none;
   }
+  .container header .main-header .header-left .header-box .downloadButton .buttonText {
+    width: 100%;
+    text-align: center;
+  }
   .container header .main-header .header-left .header-box .buttonAwesome {
     text-align: center;
     width: 70%;
@@ -2275,16 +2409,22 @@ section#sideSocials a:hover {
     padding: 0 0 0 5px;
   }
   .container .about-container .about-right p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+  .container .about-container .about-right .info .box p {
+    font-size: 1.8rem;
   }
   .container .projects-container .projects-all {
-    padding: 0;
+    padding-bottom: 25px;
   }
   .container .projects-container .projects-all .project {
     height: 25vh;
   }
   .container .skills-container .all-skills {
     display: block;
+  }
+  .container .skills-container .all-skills p {
+    font-size: 1.8rem;
   }
   .container .skills-container .all-skills .skill {
     margin: 110px auto;
